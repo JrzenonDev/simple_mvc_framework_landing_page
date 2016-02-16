@@ -12,7 +12,7 @@ use Core\Router;
 use Helpers\Hooks;
 
 /** Define routes. */
-Router::any('', 'Controllers\Welcome@index');
+Router::any('', 'Controllers\Home@index');
 Router::any('subpage', 'Controllers\Welcome@subPage');
 
 /** Module routes. */
