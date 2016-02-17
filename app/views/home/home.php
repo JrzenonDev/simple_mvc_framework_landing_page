@@ -10,8 +10,9 @@ use Core\Language;
             <div class="row">
                 <div class="col-lg-12">
                     <div class="intro-message">
-                        <h1>Landing Page</h1>
-                        <h3>A Template by Start Bootstrap</h3>
+                        <h1>José Roberto de Oliveira</h1>
+                        <h3>Analista e Desenvolvedor de Sistema Web, Mobile e entusiasta da tecnologia.</h3>
+                        <img class="img-circle" src="http://dev.webdesignhull.com/landing-page/app/templates/default/img/banner-bg.jpg" alt="" width="150px" height="150px">
                         <hr class="intro-divider">
                         <ul class="list-inline intro-social-buttons">
                             <li>
