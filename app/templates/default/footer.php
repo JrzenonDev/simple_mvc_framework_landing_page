@@ -27,10 +27,14 @@ $hooks = Hooks::get();
                         </li>
                         <li class="footer-menu-divider">&sdot;</li>
                         <li>
-                            <a href="#contact">Contact</a>
+                            <p><strong>Email: </strong><a href="mailto:jrobertoonb@gmail.com">jrobertoonb@gmail.com</a></p>
+                        </li>
+                        <li>
+                            <p><strong>Phone: </strong>o11 - 97476-4843</p>
                         </li>
                     </ul>
                     <p class="copyright text-muted small">Copyright &copy; Your Company 2014. All Rights Reserved</p>
+
                 </div>
             </div>
         </div>
