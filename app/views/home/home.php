@@ -12,14 +12,14 @@ use Core\Language;
                     <div class="intro-message">
                         <h1>José Roberto de Oliveira</h1>
                         <h3>Analista e Desenvolvedor de Sistema Web, Mobile e entusiasta da tecnologia.</h3>
-                        <img class="img-circle" src="http://dev.webdesignhull.com/landing-page/app/templates/default/img/banner-bg.jpg" alt="" width="150px" height="150px">
+                        <img class="img-circle" src="app/templates/default/img/jose.jpg" alt="" width="200px" height="200px">
                         <hr class="intro-divider">
                         <ul class="list-inline intro-social-buttons">
                             <li>
                                 <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
                             </li>
                             <li>
-                                <a href="https://github.com/IronSummitMedia/startbootstrap" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
+                                <a target="_blank" href="https://github.com/JrzenonDev/" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
                             </li>
                             <li>
                                 <a href="#" class="btn btn-default btn-lg"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">Linkedin</span></a>
@@ -45,11 +45,16 @@ use Core\Language;
                 <div class="col-lg-5 col-sm-6">
                     <hr class="section-heading-spacer">
                     <div class="clearfix"></div>
-                    <h2 class="section-heading">Death to the Stock Photo:<br>Special Thanks</h2>
-                    <p class="lead">A special thanks to <a target="_blank" href="http://join.deathtothestockphoto.com/">Death to the Stock Photo</a> for providing the photographs that you see in this template. Visit their website to become a member.</p>
+                    <h2 class="section-heading">Desenvolvimento Mobile<br>Apps Híbridos</h2>
+                    <p class="lead">
+                        Desenvolvimento de aplicativos móveis com HTML, CSS e JS. Alvo de múltiplas plataformas com base de um código, utilizando tecnologias como:
+                        <a target="_blank" href="https://cordova.apache.org/">Cordova - </a>
+                        <a taet="_blank" href="https://angularjs.org/">Angular - </a>
+                        <a target="_blank" href="ionicframework.com/">Ionic .</a>
+                    </p>
                 </div>
                 <div class="col-lg-5 col-lg-offset-2 col-sm-6">
-                    <img class="img-responsive" src="http://dev.webdesignhull.com/landing-page/app/templates/default/img/ipad.png" alt="">
+                    <img class="img-responsive" src="app/templates/default/img/ipad.png" alt="">
                 </div>
             </div>
 
@@ -67,11 +72,24 @@ use Core\Language;
                 <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
                     <hr class="section-heading-spacer">
                     <div class="clearfix"></div>
-                    <h2 class="section-heading">3D Device Mockups<br>by PSDCovers</h2>
-                    <p class="lead">Turn your 2D designs into high quality, 3D product shots in seconds using free Photoshop actions by <a target="_blank" href="http://www.psdcovers.com/">PSDCovers</a>! Visit their website to download some of their awesome, free photoshop actions!</p>
+                    <h2 class="section-heading">Desenvolvimento Web<br>Back-End</h2>
+                    <p class="lead">Desenvolvedor de aplicações rest (API), sistemas, sites, relatórios e scripts adicionais aos sistemas</p>
+                    <p class="lead">
+                        <strong>Linguagens usadas:</strong><br>
+                        Back-end:
+                        <a target="_blank" href="https://php.net/manual/pt_BR/index.php">PHP, </a>
+                        <a target="_blank" href="https://www.mysql.com/">MySQL</a><br>
+                        Front-end:
+                        <a target="_self" href="#">Javascript, </a>
+                        <a target="_self" href="#">HTML5 AND CSS3, </a>
+                        <a target="_blank" href="https://getbootstrap.com/">Bootstrap <i>(framework front-end)</i></a>
+                    </p>
+                    <p class="lead">
+                        Técnicas utilizadas:<br>Utilizo programação OO, padrões MVC e utilizo alguns Framework para auxiliar na produção como: <a target="_blank" href="https://www.slimframework.com/">Slim Framework</a>, <a target="_blank" href="https://simplemvcframework.com/">Simple MVC Framework</a> e mais alguns que ainda estou testando.
+                    </p>
                 </div>
                 <div class="col-lg-5 col-sm-pull-6  col-sm-6">
-                    <img class="img-responsive" src="http://dev.webdesignhull.com/landing-page/app/templates/default/img/dog.png" alt="">
+                    <img class="img-responsive" src="app/templates/default/img/desktop.png" alt="">
                 </div>
             </div>
 
@@ -89,11 +107,18 @@ use Core\Language;
                 <div class="col-lg-5 col-sm-6">
                     <hr class="section-heading-spacer">
                     <div class="clearfix"></div>
-                    <h2 class="section-heading">Google Web Fonts and<br>Font Awesome Icons</h2>
-                    <p class="lead">This template features the 'Lato' font, part of the <a target="_blank" href="http://www.google.com/fonts">Google Web Font library</a>, as well as <a target="_blank" href="http://fontawesome.io">icons from Font Awesome</a>.</p>
+                    <h2 class="section-heading">Respeito com os padrões Web<br>Responsividade</h2>
+                    <p class="lead">Os projetos e suas idéias na palma da sua mão.</p>
+                    <p class="lead">Projetando suas idéias para que possa ser acessada de qualquer tipo de dispositivo, seja mobile ou desktop.</p>
+                    <p class="lead">Além de poder formalizar a sua idéia em um aplicativo para que possa ser baixado para versões:</p>
+                    <a target="_blank" href="http://play.google.com/">Android</a><br>
+                    <a target="_blank" href="http://www.apple.com/br/itunes/">IOS</a><br>
+                    <a target="_blank" href="http://https://www.microsoft.com/pt-br/store/apps/windows-phone">Windows-phone</a>
+                    <h3 class="section-heading">Estes são os alguns dos meus objetivos como profissional de tecnologia.</h3>
+
                 </div>
-                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
-                    <img class="img-responsive" src="http://dev.webdesignhull.com/landing-page/app/templates/default/img/phones.png" alt="">
+                <div class="col-lg-5 col--offset-2 col-sm-6">
+                    <img class="img-responsive" src="app/templates/default/img/phones.png" alt="">
                 </div>
             </div>
 
