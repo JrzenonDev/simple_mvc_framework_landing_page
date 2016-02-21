@@ -1,10 +1,6 @@
 <?php
 /**
  * Routes - all standard routes are defined here.
- *
- * @author David Carr - dave@daveismyname.com
- * @version 2.2
- * @date updated Sept 19, 2015
  */
 
 /** Create alias for Router. */
@@ -13,6 +9,7 @@ use Helpers\Hooks;
 
 /** Define routes. */
 Router::any('', 'Controllers\Home@index');
+Router::any('contact', 'Controllers\Contact@contact');
 Router::any('subpage', 'Controllers\Welcome@subPage');
 
 /** Module routes. */

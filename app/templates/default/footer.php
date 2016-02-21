@@ -33,7 +33,7 @@ $hooks = Hooks::get();
                             <p><strong>Phone: </strong>o11 - 97476-4843</p>
                         </li>
                     </ul>
-                    <p class="copyright text-muted small">Copyright &copy; Your Company 2014. All Rights Reserved</p>
+                    <p class="copyright text-muted small">Copyright &copy; José Roberto de Oliveira 2016. All Rights Reserved</p>
 
                 </div>
             </div>
