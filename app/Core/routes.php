@@ -9,7 +9,7 @@ use Helpers\Hooks;
 
 /** Define routes. */
 Router::any('', 'Controllers\Home@index');
-Router::any('contact', 'Controllers\Contact@contact');
+Router::any('contact', 'Controllers\Contact@index');
 Router::any('subpage', 'Controllers\Welcome@subPage');
 
 /** Module routes. */
