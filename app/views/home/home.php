@@ -12,11 +12,7 @@ use Core\Language;
                     <div class="intro-message">
                         <h1>José Roberto de Oliveira</h1>
                         <h3>Analista e Desenvolvedor de Sistema Web, Mobile e entusiasta da tecnologia.</h3>
-<<<<<<< HEAD
                         <img class="img-circle" src="app/templates/default/img/jose.jpg" alt="" width="200px" height="200px">
-=======
-                        <img class="img-circle" src="http://dev.webdesignhull.com/landing-page/app/templates/default/img/banner-bg.jpg" alt="" width="150px" height="150px">
->>>>>>> origin/master
                         <hr class="intro-divider">
                         <ul class="list-inline intro-social-buttons">
                             <li>
@@ -147,7 +143,7 @@ use Core\Language;
                             <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
                         </li>
                         <li>
-                            <a href="https://github.com/IronSummitMedia/startbootstrap" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
+                            <a href="https://github.com/JrzenonDev/" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
                         </li>
                         <li>
                             <a href="#" class="btn btn-default btn-lg"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">Linkedin</span></a>
