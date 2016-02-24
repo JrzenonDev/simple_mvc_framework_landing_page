@@ -11,7 +11,7 @@ use Core\Controller;
 /**
  * Sample controller showing a construct and 2 methods and their typical usage.
  */
-class Contact extends Controller
+class PainelContatoUsuario extends Controller
 {
 
     /**
@@ -32,7 +32,7 @@ class Contact extends Controller
         $data['welcome_message'] = $this->language->get('welcome_message');
 
         View::renderTemplate('header', $data);
-        View::render('contact/contact', $data);
+        View::render('painel_contato_usuario/painel_contato_usuario', $data);
         View::renderTemplate('footer', $data);
     }
 
