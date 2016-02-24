@@ -22,7 +22,6 @@ class PainelContatoUsuario extends Model {
                                   LEFT JOIN contato_telefone ctel ON ctel.id_contato = c.id_contato
                                   LEFT JOIN contato_telefone_tipo cteltipo ON cteltipo.id_contato_telefone_tipo = ctel.id_contato_telefone_tipo");
 
-
       return $query;
 
     }

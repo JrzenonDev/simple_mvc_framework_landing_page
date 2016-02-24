@@ -90,7 +90,7 @@ class Database extends PDO
      * @param  string $class     class name
      * @return array            returns an array of records
      */
-    public function select($sql, $array = array(), $fetchMode = PDO::FETCH_OBJ, $class = '')
+    public function select($sql, $array = array(), $fetchMode = PDO::FETCH_ASSOC, $class = '')
     {
         $stmt = $this->prepare($sql);
         foreach ($array as $key => $value) {
