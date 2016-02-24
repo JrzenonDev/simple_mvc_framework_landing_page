@@ -15,7 +15,8 @@ use Core\Language;
               <tr>
                 <th>Nome</th>
                 <th>Email</th>
-                <th>Telefeone</th>
+                <th>Telefone</th>
+                <th>Telefone Tipo</th>
                 <th></th>
               </tr>
             </thead>
@@ -23,9 +24,10 @@ use Core\Language;
             <tbody>
               <?php foreach($data['contatos'] as $contato): var_dump($data['contatos'])?>
               <tr>
-                <td><?=$contato['nome'];?></td>
+                <td><?=$contato['contatonome'];?></td>
                 <td><?=$contato['email'];?></td>
                 <td><?=$contato['telefone'];?></td>
+                <td><?=$contato['telnome'];?></td>
                 <td>
                   <div class="coluna-options">
                     <a href="#" class="btn btn-default">

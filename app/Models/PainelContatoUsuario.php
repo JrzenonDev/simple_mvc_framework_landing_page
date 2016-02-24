@@ -13,9 +13,9 @@ class PainelContatoUsuario extends Model {
 
     function getUsuarioList() {
 
-      $query = $this->db->select("SELECT c.id_contato, c.nome, cemail.email,
+      $query = $this->db->select("SELECT c.id_contato, c.nome AS contatonome, cemail.email,
                                          cemailtipo.nome, ctel.ddd,
-                                         ctel.telefone, cteltipo.nome
+                                         ctel.telefone, cteltipo.nome AS telnome
                                   FROM contato c
                                   LEFT JOIN contato_email cemail ON c.id_contato = cemail.id_contato
                                   LEFT JOIN contato_email_tipo cemailtipo ON cemailtipo.id_contato_email_tipo = cemail.id_contato_email_tipo
