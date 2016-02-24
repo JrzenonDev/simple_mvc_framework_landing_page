@@ -21,11 +21,11 @@ use Core\Language;
             </thead>
 
             <tbody>
-              <?php foreach($data['contatos'] as $contato): ?>
+              <?php foreach($data['contatos'] as $contato): var_dump($data['contatos'])?>
               <tr>
-                <td><a href="<?=$contato['nome'];?>"></td>
-                <td><a href="<?=$contato['email'];?>"></td>
-                <td><a href="<?=$contato['telefone'];?>"></td>
+                <td><?=$contato['nome'];?></td>
+                <td><?=$contato['email'];?></td>
+                <td><?=$contato['telefone'];?></td>
                 <td>
                   <div class="coluna-options">
                     <a href="#" class="btn btn-default">
