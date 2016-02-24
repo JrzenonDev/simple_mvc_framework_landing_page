@@ -21,6 +21,7 @@ class PainelContatoUsuario extends Controller
     {
         parent::__construct();
         $this->language->load('Welcome');
+        $this->contatos = new \Models\PainelContatoUsuario();
     }
 
     /**
@@ -30,6 +31,14 @@ class PainelContatoUsuario extends Controller
     {
         $data['title'] = $this->language->get('welcome_text');
         $data['welcome_message'] = $this->language->get('welcome_message');
+
+        View::renderTemplate('header', $data);
+        View::render('painel_contato_usuario/painel_contato_usuario', $data);
+        View::renderTemplate('footer', $data);
+    }
+
+    public function ListUser() {
+        $data['contatos'] = $this->contatos->getUsuarioList();
 
         View::renderTemplate('header', $data);
         View::render('painel_contato_usuario/painel_contato_usuario', $data);

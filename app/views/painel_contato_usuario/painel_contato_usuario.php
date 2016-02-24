@@ -8,7 +8,7 @@ use Core\Language;
       <div class="col-md-12">
         <section class="page-header">
           <a class="pull-right btn btn-default" href="/logout" role="button">Logout</a>
-          <h1>Manifestações</h1>
+          <h1>Dados do usuário</h1>
 
           <table dw-loading="manifestacoes" class="table table-bordered">
             <thead>
@@ -21,34 +21,26 @@ use Core\Language;
             </thead>
 
             <tbody>
+              <?php foreach($data['contatos'] as $contato): ?>
               <tr>
-                <td>{{manifestacao.protocolo || 'Sem Número'}}</td>
-                <td>{{manifestacao.rodovia_nome}}</td>
-                <td>{{manifestacao.sentido_descricao}}</td>
+                <td><a href="<?=$contato['nome'];?>"></td>
+                <td><a href="<?=$contato['email'];?>"></td>
+                <td><a href="<?=$contato['telefone'];?>"></td>
                 <td>
                   <div class="coluna-options">
-                    <a href="/manifestacoes/{{manifestacao.manifestacao_id}}" class="btn btn-default" uib-tooltip="Detalhes" tooltip-placement="top" tooltip-append-to-body="true">
+                    <a href="#" class="btn btn-default">
                       <span class="glyphicon glyphicon-info-sign"></span>
                     </a>
-                    <a artesp-only ng-click="deleteManifestacao(manifestacao.manifestacao_id)" confirm="Os dados não poderão ser recuperados. Deseja realmente prosseguir ?" confirm-title="Excluir manifestação" confirm-ok="Sim" confirm-cancel="Cancelar" class="btn btn-default" uib-tooltip="Excluir manifestação" tooltip-placement="top" tooltip-append-to-body="true">
+                    <a href="#" class="btn btn-default">
                       <span class="glyphicon glyphicon-trash"></span>
                     </a>
                   </div>
                 </td>
               </tr>
+              <?php endforeach; ?>
             </tbody>
           </table>
 
-          <uib-pagination items-per-page="searchData.results_per_page"
-                          total-items="searchData.entry_count"
-                          ng-model="searchData.pg"
-                          ng-change="updateList(searchData.pg)"
-                          ng-disabled="loading"
-                          previous-text="<"
-                          next-text=">"
-                          max-size="20"
-                          force-ellipses="true">
-          </uib-pagination>
         </section>
       </div>
     </div>

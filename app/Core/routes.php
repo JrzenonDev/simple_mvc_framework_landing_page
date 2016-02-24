@@ -11,7 +11,7 @@ use Helpers\Hooks;
 Router::any('', 'Controllers\Home@index');
 Router::any('contact', 'Controllers\Contact@index');
 Router::any('subpage', 'Controllers\Welcome@subPage');
-Router::any('painel_contato_usuario', 'Controllers\PainelContatoUsuario@index');
+Router::any('painel_contato_usuario', 'Controllers\PainelContatoUsuario@ListUser');
 
 /** Module routes. */
 $hooks = Hooks::get();
