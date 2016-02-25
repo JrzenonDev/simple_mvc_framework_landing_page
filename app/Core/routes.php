@@ -10,8 +10,8 @@ use Helpers\Hooks;
 /** Define routes. */
 Router::any('', 'Controllers\Home@index');
 Router::any('contact', 'Controllers\Contact@index');
-Router::any('subpage', 'Controllers\Welcome@subPage');
 Router::any('painel_contato_usuario', 'Controllers\PainelContatoUsuario@ListUser');
+Router::any('edit_contato_usuario', 'Controllers\PainelContatoUsuario@EditUser');
 
 /** Module routes. */
 $hooks = Hooks::get();

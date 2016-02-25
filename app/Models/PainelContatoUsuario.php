@@ -26,4 +26,10 @@ class PainelContatoUsuario extends Model {
 
     }
 
+    function editUsuarioList() {
+      $query = "abc";
+
+      return $query;
+    }
+
 }

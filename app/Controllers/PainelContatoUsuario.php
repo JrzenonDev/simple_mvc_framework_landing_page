@@ -45,5 +45,13 @@ class PainelContatoUsuario extends Controller
         View::renderTemplate('footer', $data);
     }
 
+    public function EditUser() {
+        $data['contatos'] = $this->contatos->editUsuarioList();
+
+        View::renderTemplate('header', $data);
+        View::render('painel_contato_usuario/edit_contato_usuario', $data);
+        View::renderTemplate('footer', $data);
+    }
+
 
 }

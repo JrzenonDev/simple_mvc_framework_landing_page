@@ -8,7 +8,7 @@ use Core\Language;
       <div class="col-md-12">
         <section class="page-header">
           <a class="pull-right btn btn-default" href="/logout" role="button">Logout</a>
-          <h1>Dados do usuário</h1>
+          <h1>Lista de usuários</h1>
 
           <table dw-loading="manifestacoes" class="table table-bordered">
             <thead>
@@ -22,7 +22,7 @@ use Core\Language;
             </thead>
 
             <tbody>
-              <?php foreach($data['contatos'] as $contato): var_dump($data['contatos'])?>
+              <?php foreach($data['contatos'] as $contato):?>
               <tr>
                 <td><?=$contato['contatonome'];?></td>
                 <td><?=$contato['email'];?></td>
@@ -30,8 +30,8 @@ use Core\Language;
                 <td><?=$contato['telnome'];?></td>
                 <td>
                   <div class="coluna-options">
-                    <a href="#" class="btn btn-default">
-                      <span class="glyphicon glyphicon-info-sign"></span>
+                    <a href="/edit_contato_usuario" class="btn btn-default">
+                      <span class="glyphicon glyphicon-pencil"></span>
                     </a>
                     <a href="#" class="btn btn-default">
                       <span class="glyphicon glyphicon-trash"></span>
