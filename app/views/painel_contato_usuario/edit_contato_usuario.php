@@ -27,7 +27,7 @@ use Core\Language;
                 <td><input type="text" name="FirstName" value="<?=$contato['contatonome'];?>"></td>
                 <td><input type="text" name="FirstName" value="<?=$contato['email'];?>"></td>
                 <td><input type="text" name="FirstName" value="<?=$contato['telefone'];?>"></td>
-                <td><input type="text" name="FirstName" value="<?=$contato['telnome'];?>"></td>
+                <td><input type="text" name="FirstName" value="<?=$contato['phonetiponome'];?>"></td>
                 <td>
                   <div class="coluna-options">
                     <a href="/edit_contato_usuario/<?=$contato['id_contato']?>" class="btn btn-default">

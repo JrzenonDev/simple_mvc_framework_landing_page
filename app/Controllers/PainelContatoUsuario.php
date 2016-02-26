@@ -46,10 +46,18 @@ class PainelContatoUsuario extends Controller
     }
 
     public function GetUser($id_contato) {
-        $data['contatos'] = $this->contatos->getUser($id_contato);
+        //$data['contatos'] = $this->contatos->getUser($id_contato);
+
+        $user_data = $this->contatos->getUser($id_contato);
+        var_dump($user_data);
+        var_dump('aaa');
+        die();
+        $data['user'] = $user_data['user'];
+        $date['email'] = $user_data['email'];
+        $data['phone'] = $user_data['phone'];
 
         View::renderTemplate('header', $data);
-        View::render('painel_contato_usuario/edit_contato_usuario', $data);
+        View::render('painel_contato_usuario/painel_contato_usuario', $data);
         View::renderTemplate('footer', $data);
     }
 
