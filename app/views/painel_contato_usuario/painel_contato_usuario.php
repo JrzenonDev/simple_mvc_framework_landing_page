@@ -15,6 +15,7 @@ use Core\Language;
               <tr>
                 <th>Nome</th>
                 <th>Email</th>
+                <th>Email Tipo</th>
                 <th>Telefone</th>
                 <th>Telefone Tipo</th>
                 <th></th>
@@ -26,6 +27,7 @@ use Core\Language;
               <tr>
                 <td><?=$contato['contatonome'];?></td>
                 <td><?=$contato['email'];?></td>
+                <td><?=$contato['emailnome'];?></td>
                 <td><?=$contato['telefone'];?></td>
                 <td><?=$contato['telnome'];?></td>
                 <td>
