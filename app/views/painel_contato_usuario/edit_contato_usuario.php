@@ -22,7 +22,7 @@ use Core\Language;
             </thead>
 
             <tbody>
-
+              <?php foreach($data['contatos'] as $contato):?>
               <tr>
                 <td><input type="text" name="FirstName" value="<?=$contato['contatonome'];?>"></td>
                 <td><input type="text" name="FirstName" value="<?=$contato['email'];?>"></td>
@@ -30,7 +30,7 @@ use Core\Language;
                 <td><input type="text" name="FirstName" value="<?=$contato['telnome'];?>"></td>
                 <td>
                   <div class="coluna-options">
-                    <a href="#" class="btn btn-default">
+                    <a href="/edit_contato_usuario/<?=$contato['id_contato']?>" class="btn btn-default">
                       <span class="glyphicon glyphicon-info-sign"></span>
                     </a>
                     <a href="#" class="btn btn-default">
@@ -38,6 +38,7 @@ use Core\Language;
                     </a>
                   </div>
                 </td>
+              <?php endforeach; ?>
               </tr>
 
             </tbody>
