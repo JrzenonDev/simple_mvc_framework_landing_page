@@ -8,7 +8,7 @@ use Core\Language;
       <div class="col-md-12">
         <section class="page-header">
           <a class="pull-right btn btn-default" href="/logout" role="button">Logout</a>
-          <h1>Editar dados do usuário</h1>
+          <h4>Editar dados do usuário</h4>
 
           <table dw-loading="manifestacoes" class="table table-bordered">
             <thead>
@@ -22,9 +22,10 @@ use Core\Language;
             </thead>
 
             <tbody>
-              <?php foreach($data['contatos'] as $contato):?>
+              <p><?php $data['email']; ?></p>
+              <!-- <?php foreach($data['user'] as $contato):?> -->
               <tr>
-                <td><input type="text" name="FirstName" value="<?=$contato['contatonome'];?>"></td>
+                <td><input type="text" name="FirstName" value="$data['email']"></td>
                 <td><input type="text" name="FirstName" value="<?=$contato['email'];?>"></td>
                 <td><input type="text" name="FirstName" value="<?=$contato['telefone'];?>"></td>
                 <td><input type="text" name="FirstName" value="<?=$contato['phonetiponome'];?>"></td>
