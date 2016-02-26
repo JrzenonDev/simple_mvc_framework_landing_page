@@ -56,4 +56,12 @@ class PainelContatoUsuario extends Model {
       //                              ->table
     }
 
+    function deleteUser($id_contato) {
+
+      if (!isset($id_contato)) {
+        return false;
+      }
+
+    }
+
 }

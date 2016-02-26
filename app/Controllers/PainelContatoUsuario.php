@@ -61,5 +61,13 @@ class PainelContatoUsuario extends Controller
         View::renderTemplate('footer', $data);
     }
 
+    public function DeleteUser($id_contato) {
+        $data['contatos'] = $this->contatos->deleteUser($id_contato);
+
+        View::renderTemplate('header', $data);
+        View::render('painel_contato_usuario/edit_contato_usuario', $data);
+        View::renderTemplate('footer', $data);
+    }
+
 
 }

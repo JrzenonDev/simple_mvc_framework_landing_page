@@ -13,6 +13,7 @@ Router::any('contact', 'Controllers\Contact@index');
 Router::any('painel_contato_usuario', 'Controllers\PainelContatoUsuario@ListUser');
 Router::any('edit_contato_usuario/(:num)', 'Controllers\PainelContatoUsuario@GetUser');
 Router::any('edit_contato_usuario/(:num)', 'Controllers\PainelContatoUsuario@EditUser');
+Router::any('edit_contato_usuario/(:num)', 'Controllers\PainelContatoUsuario@DeleteUser');
 
 /** Module routes. */
 $hooks = Hooks::get();

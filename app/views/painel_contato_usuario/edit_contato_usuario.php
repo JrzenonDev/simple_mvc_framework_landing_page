@@ -33,7 +33,7 @@ use Core\Language;
                     <a href="/edit_contato_usuario/<?=$contato['id_contato']?>" class="btn btn-default">
                       <span class="glyphicon glyphicon-pencil"></span>
                     </a>
-                    <a href="#" class="btn btn-default">
+                    <a href="/edit_contato_usuario/<?=$contato['id_contato']?>" class="btn btn-default">
                       <span class="glyphicon glyphicon-trash"></span>
                     </a>
                   </div>
