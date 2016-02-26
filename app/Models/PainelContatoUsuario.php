@@ -11,10 +11,10 @@ class PainelContatoUsuario extends Model {
         $this->db = Database::get();
     }
 
-    function getUsuarioList() {
+    function getUserList() {
 
       $query = $this->db->select("SELECT c.id_contato, c.nome AS contatonome, cemail.email,
-                                         cemailtipo.nome, ctel.ddd,
+                                         cemailtipo.nome AS emailnome, ctel.ddd,
                                          ctel.telefone, cteltipo.nome AS telnome
                                   FROM contato c
                                   LEFT JOIN contato_email cemail ON c.id_contato = cemail.id_contato
@@ -26,10 +26,10 @@ class PainelContatoUsuario extends Model {
 
     }
 
-    function editUsuarioList($id_contato) {
+    function getUser($id_contato) {
 
-      if (!isset($_POST['id_contato'])) {
-        $id_contato_user = $_POST['id_contato'];
+      if (!isset($id_contato)) {
+        return false;
       }
 
       $query = $this->db->select("SELECT c.id_contato, c.nome AS contatonome, cemail.email,
@@ -44,6 +44,16 @@ class PainelContatoUsuario extends Model {
                                   [':id_contato' => $id_contato]);
 
       return $query;
+    }
+
+    function updateUser($id_contato) {
+
+      if (!isset($id_contato)) {
+        return false;
+      }
+
+      // $updateStatement = $this->$db->update()
+      //                              ->table
     }
 
 }
