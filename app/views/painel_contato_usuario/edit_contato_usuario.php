@@ -26,14 +26,38 @@ use Core\Language;
             <tbody>
 
 
+                  <?php foreach($data['user'] as $user_data):?>
+                  <?php foreach($data['email'] as $email_data):?>
+                  <?php foreach($data['phone'] as $phone_data):?>
               <tr>
-                <td><input type="text" name="FirstName" value="<?=$data['contatonome'];?>"</td>
-                <td><input type="text" name="FirstName" value="<?=$data['email'];?>"></td>
-                <td><input type="text" name="FirstName" value="<?=$data['emailtiponome'];?>"></td>
-                <td><input type="text" name="FirstName" value="<?=$data['phone'];?>"></td>
-                <td><input type="text" name="FirstName" value="<?=$data['phonetiponome'];?>"></td>
-                <td><input type="text" name="FirstName" value="<?=$data['ddd'];?>"></td>
                 <td>
+                  <input type="text" name="FirstName" value="<?=$user_data['contatonome'];?>">
+                </td>
+
+                <td>
+                  <input type="text" name="FirstName" value="<?=$email_data['email'];?>">
+                </td>
+
+                <td>
+                  <input type="text" name="FirstName" value="<?=$email_data['emailtiponome'];?>">
+                </td>
+
+                <td>
+                  <input type="text" name="FirstName" value="<?=$phone_data['phone'];?>">
+                </td>
+
+                <td>
+                  <input type="text" name="FirstName" value="<?=$phone_data['phonetiponome'];?>">
+                </td>
+
+                <td>
+                  <input type="text" name="FirstName" value="<?=$phone_data['ddd'];?>">
+                </td>
+
+                <td>
+                  <?php endforeach; ?>
+                  <?php endforeach; ?>
+                  <?php endforeach; ?>
                   <div class="coluna-options">
                     <a href="/edit_contato_usuario/<?=$contato['id_contato']?>" class="btn btn-default">
                       <span class="glyphicon glyphicon-pencil"></span>
