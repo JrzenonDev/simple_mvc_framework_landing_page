@@ -48,34 +48,23 @@ class PainelContatoUsuario extends Controller
     public function GetUser($id_contato) {
         //$data['contatos'] = $this->contatos->getUser($id_contato);
 
-        $user_data = $this->contatos->getUser($id_contato);
-        var_dump($user_data);
-        var_dump('aaa');
-        die();
+        $user_name = $this->contatos->getOneName($id_contato);
+        $user_mail = $this->contatos->getOneMail($id_contato);
+        $user_phone = $this->contatos->getOnePhone($id_contato);
+
+            var_dump($user_mail);
+            var_dump('aaa');
+            die();
         $data['user'] = $user_data['user'];
         $data['email'] = $user_data['email'];
         $data['phone'] = $user_data['phone'];
 
         View::renderTemplate('header', $data);
-        View::render('painel_contato_usuario/edit_contato_usuario', $data);
+        View::render('painel_contato_usuario/edit_contato_usuario', $data, $user_name, $user_mail, $user_phone);
         View::renderTemplate('footer', $data);
     }
 
-    public function EditUser($id_contato) {
-        $data['contatos'] = $this->contatos->updateUser($id_contato);
 
-        View::renderTemplate('header', $data);
-        View::render('painel_contato_usuario/edit_contato_usuario', $data);
-        View::renderTemplate('footer', $data);
-    }
-
-    public function DeleteUser($id_contato) {
-        $data['contatos'] = $this->contatos->deleteUser($id_contato);
-
-        View::renderTemplate('header', $data);
-        View::render('painel_contato_usuario/edit_contato_usuario', $data);
-        View::renderTemplate('footer', $data);
-    }
 
 
 }

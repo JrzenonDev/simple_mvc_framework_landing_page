@@ -27,46 +27,32 @@ class PainelContatoUsuario extends Model {
 
     }
 
-    function getUser($id_contato) {
+    function getOneName($id_contato) {
 
-      $user_data = $this->db->select("SELECT c.id_contato, c.nome AS contatonome
+      $name_list = $this->db->select("SELECT c.id_contato, c.nome AS contatonome
                                       FROM contato c
                                       WHERE c.id_contato = $id_contato");
+      return $name_list;
+    }
 
-      $email_list = $this->db->select("SELECT c.id_contato AS id_do_contato, cemail.id_contato, cemail.email, cemailtipo.nome AS emailtiponome
+    function getOneMail($id_contato) {
+
+      $mail_list = $this->db->select("SELECT cemail.id_contato, cemail.email, cemailtipo.nome AS emailtiponome
                                        FROM contato_email cemail
-                                       JOIN contato c ON c.id_contato = cemail.id_contato
                                        JOIN contato_email_tipo cemailtipo
                                        ON cemail.id_contato_email_tipo = cemailtipo.id_contato_email_tipo
                                        WHERE cemail.id_contato = $id_contato");
+      return $mail_list;
 
-      $phone_list = $this->db->select("SELECT c.id_contato AS id_do_contato, cphone.id_contato, cphone.ddd, cphone.telefone, cphonetipo.nome AS phonetiponome
+    }
+
+    function getOnePhone($id_contato) {
+
+      $phone_list = $this->db->select("SELECT cphone.id_contato, cphone.ddd, cphone.telefone, cphonetipo.nome AS phonetiponome
                                        FROM contato_telefone cphone
-                                       JOIN contato c ON c.id_contato = cphone.id_contato
                                        JOIN contato_telefone_tipo cphonetipo ON cphone.id_contato_telefone_tipo = cphonetipo.id_contato_telefone_tipo
                                        WHERE cphone.id_contato = $id_contato");
-      return [
-        'user' => $user_data,
-        'email' => $email_list,
-        'phone' => $phone_list
-      ];
-    }
-
-    function updateUser($id_contato) {
-
-      if (!isset($id_contato)) {
-        return false;
-      }
-
-      // $updateStatement = $this->$db->update()
-      //                              ->table
-    }
-
-    function deleteUser($id_contato) {
-
-      if (!isset($id_contato)) {
-        return false;
-      }
+      return $phone_list;
 
     }
 
