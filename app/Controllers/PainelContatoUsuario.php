@@ -49,9 +49,9 @@ class PainelContatoUsuario extends Controller
         //$data['contatos'] = $this->contatos->getUser($id_contato);
 
         $user_data = $this->contatos->getUser($id_contato);
-        // var_dump($user_data);
-        // var_dump('aaa');
-        // die();
+        var_dump($user_data);
+        var_dump('aaa');
+        die();
         $data['user'] = $user_data['user'];
         $data['email'] = $user_data['email'];
         $data['phone'] = $user_data['phone'];
