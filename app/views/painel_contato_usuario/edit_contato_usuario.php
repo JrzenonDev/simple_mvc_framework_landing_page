@@ -26,38 +26,45 @@ use Core\Language;
             <tbody>
 
 
-                  <?php foreach($data['user'] as $user_data):?>
-                  <?php foreach($data['email'] as $email_data):?>
-                  <?php foreach($data['phone'] as $phone_data):?>
+
               <tr>
+                <?php if (empty($user_name[])) { echo "Sem dados para este campo";
+                        foreach($user_name[] as $user_name_1):?>
                 <td>
-                  <input type="text" name="FirstName" value="<?=$user_data['contatonome'];?>">
+                  <input type="text" name="FirstName" value="<?=$user_name_1['contatonome'];?>">
+                </td>
+                <?php endforeach; ?>
+                <?php endif; ?>
+
+                <?php if (empty($user_mail[])) { echo "Sem dados para este campo";
+                        foreach($user_mail[] as $user_name_1):?>
+                <td>
+                  <input type="text" name="FirstName" value="<?=$user_mail_1['email'];?>">
                 </td>
 
                 <td>
-                  <input type="text" name="FirstName" value="<?=$email_data['email'];?>">
+                  <input type="text" name="FirstName" value="<?=$user_mail_1['emailtiponome'];?>">
+                </td>
+                <?php endforeach; ?>
+                <?php endif; ?>
+
+                <?php if (empty($user_phone[])) { echo "Sem dados para este campo";
+                        foreach($user_phone[] as $user_phone_1):?>
+                <td>
+                  <input type="text" name="FirstName" value="<?=$user_phone_1['phone'];?>">
                 </td>
 
                 <td>
-                  <input type="text" name="FirstName" value="<?=$email_data['emailtiponome'];?>">
+                  <input type="text" name="FirstName" value="<?=$user_phone_1['phonetiponome'];?>">
                 </td>
 
                 <td>
-                  <input type="text" name="FirstName" value="<?=$phone_data['phone'];?>">
+                  <input type="text" name="FirstName" value="<?=$user_phone_1['ddd'];?>">
                 </td>
+                <?php endforeach; ?>
+                <?php endif; ?>
 
                 <td>
-                  <input type="text" name="FirstName" value="<?=$phone_data['phonetiponome'];?>">
-                </td>
-
-                <td>
-                  <input type="text" name="FirstName" value="<?=$phone_data['ddd'];?>">
-                </td>
-
-                <td>
-                  <?php endforeach; ?>
-                  <?php endforeach; ?>
-                  <?php endforeach; ?>
                   <div class="coluna-options">
                     <a href="/edit_contato_usuario/<?=$contato['id_contato']?>" class="btn btn-default">
                       <span class="glyphicon glyphicon-pencil"></span>
