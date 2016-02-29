@@ -14,13 +14,13 @@ use Core\Language;
             <div class="panel-heading">Dados do usuário</div>
               <!-- List group -->
               <ul class="list-group">
+
                 <li class="list-group-item"><strong>Nome: </strong><?=$data['name']['contatonome'];?></li>
                 <?php foreach($data['mail'] as $user_mail):?>
+
                 <li class="list-group-item"><strong>Email: </strong><?=$user_mail['email'];?></li>
-                <?php if (!$user_name['mail']): ?>
-                  <li class="list-group-item"><strong>Email: </strong>Sem dados</li>
-                <?php endif; ?>
-              <?php endforeach; ?>
+                <?php endforeach; ?>
+
                 <li class="list-group-item">
                   <strong>Arquivo usuário:</strong><br>
                   <a ng-click="openLightbox(imagemUsuario)">
