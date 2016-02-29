@@ -31,8 +31,9 @@ class PainelContatoUsuario extends Model {
 
       $name_list = $this->db->select("SELECT c.id_contato, c.nome AS contatonome
                                       FROM contato c
-                                      WHERE c.id_contato = $id_contato");
-      return $name_list;
+                                      WHERE c.id_contato = :id_contato",
+                                      [':id_contato' => $id_contato]);
+      return $name_list[0];
     }
 
     function getOneMail($id_contato) {
@@ -41,7 +42,8 @@ class PainelContatoUsuario extends Model {
                                        FROM contato_email cemail
                                        JOIN contato_email_tipo cemailtipo
                                        ON cemail.id_contato_email_tipo = cemailtipo.id_contato_email_tipo
-                                       WHERE cemail.id_contato = $id_contato");
+                                       WHERE cemail.id_contato = :id_contato",
+                                       [':id_contato' => $id_contato]);
       return $mail_list;
 
     }
@@ -51,7 +53,8 @@ class PainelContatoUsuario extends Model {
       $phone_list = $this->db->select("SELECT cphone.id_contato, cphone.ddd, cphone.telefone, cphonetipo.nome AS phonetiponome
                                        FROM contato_telefone cphone
                                        JOIN contato_telefone_tipo cphonetipo ON cphone.id_contato_telefone_tipo = cphonetipo.id_contato_telefone_tipo
-                                       WHERE cphone.id_contato = $id_contato");
+                                       WHERE cphone.id_contato = :id_contato",
+                                       [':id_contato' => $id_contato]);
       return $phone_list;
 
     }
