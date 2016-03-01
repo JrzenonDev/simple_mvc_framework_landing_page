@@ -48,10 +48,10 @@ use Core\Language;
                         <span class="glyphicon glyphicon-pencil pull-right"></span>
                     </a>
                   </li>
-                  <?php if (empty($user_mail)): ?>
-                    <li class="list-group-item"><strong>Sem resultados</strong></li>
-                  <?php endif;?>
                 <?php endforeach; ?>
+                <?php if (empty($user_mail)): ?>
+                  <li class="list-group-item"><strong>Sem resultados de emails</strong></li>
+                <?php endif;?>
 
               </ul>
           </div>
@@ -93,7 +93,7 @@ use Core\Language;
                   </li>
                 <?php endforeach; ?>
                 <?php if (empty($user_phone)): ?>
-                    <li class="list-group-item"><strong>Sem resultados</strong></li>
+                    <li class="list-group-item"><strong>Sem resultados de telefones</strong></li>
                 <?php endif;?>
 
               </ul>
