@@ -19,39 +19,50 @@ use Core\Language;
           <div class="panel panel-primary default-jr">
             <!-- Default panel contents -->
             <div class="panel-heading default-jr">Dados do usuário (nome, emails)</div>
+
+
               <!-- List group -->
               <ul class="list-group">
 
-                <li class="list-group-item"><strong>Nome: </strong><?=$data['name']['contatonome'];?>
-                  <a href="#" class="btn btn-default pull-right">
+              <form action="#">
+              <input type="hidden" name="tipo_update" value="name" />
+              <input type="hidden" name="id" value="<?=$user_email['id_contato']?>" />
+                <li class="list-group-item"><strong>Nome: </strong><input name="nome"
+                    type="text" value="<?=$data['name']['contatonome'];?>">
+                  <a href="<?=$contato['id_contato']?>" class="btn btn-default pull-right">
                     <span class="glyphicon glyphicon-trash pull-right"></span>
                   </a>
-                  <a href="#" class="btn btn-default pull-right">
+                  <a href="<?=$contato['id_contato']?>" class="btn btn-default pull-right">
                     <span class="glyphicon glyphicon-pencil pull-right"></span>
                   </a>
                 </li>
+               </form>
 
-                <?php foreach($data['mail'] as $user_mail):?>
-                  <li class="list-group-item"><strong>Email: </strong><?=$user_mail['email'];?>
-                    <a href="#" class="btn btn-default pull-right">
-                      <span class="glyphicon glyphicon-trash pull-right"></span>
-                    </a>
-                    <a href="#" class="btn btn-default pull-right">
-                      <span class="glyphicon glyphicon-pencil pull-right"></span>
-                    </a>
-                  </li>
-                  <li class="list-group-item"><strong>Tipo de email: </strong><?=$user_mail['emailtiponome'];?>
-                    <a href="#" class="btn btn-default pull-right">
-                      <span class="glyphicon glyphicon-trash pull-right"></span>
-                    </a>
-                    <a href="#" class="btn btn-default pull-right">
-                        <span class="glyphicon glyphicon-pencil pull-right"></span>
-                    </a>
-                  </li>
-                <?php endforeach; ?>
-                <?php if (empty($user_mail)): ?>
-                  <li class="list-group-item"><strong>Sem resultados de emails</strong></li>
-                <?php endif;?>
+                  <?php foreach($data['mail'] as $user_mail):?>
+                    <form action="#">
+                      <input type="hidden" name="tipo_update" value="mail" />
+                      <input type="hidden" name="id" value="<?=$user_email['id_contato']?>" />
+                      <li class="list-group-item"><strong>Email: </strong><input name="email" type="text" value="<?=$user_mail['email'];?>">
+                        <a href="<?=$contato['id_contato']?>" class="btn btn-default pull-right">
+                          <span class="glyphicon glyphicon-trash pull-right"></span>
+                        </a>
+                        <a href="<?=$contato['id_contato']?>" class="btn btn-default pull-right">
+                          <span class="glyphicon glyphicon-pencil pull-right"></span>
+                        </a>
+                      </li>
+                      <li class="list-group-item"><strong>Tipo de email: </strong><input name="emailtiponome" type="text" value="<?=$user_mail['emailtiponome'];?>">
+                        <a href="<?=$contato['id_contato']?>" class="btn btn-default pull-right">
+                          <span class="glyphicon glyphicon-trash pull-right"></span>
+                        </a>
+                        <a href="<?=$contato['id_contato']?>" class="btn btn-default pull-right">
+                            <span class="glyphicon glyphicon-pencil pull-right"></span>
+                        </a>
+                      </li>
+                    </form>
+                  <?php endforeach; ?>
+                  <?php if (empty($user_mail)): ?>
+                    <li class="list-group-item"><strong>Sem resultados de emails</strong></li>
+                  <?php endif;?>
 
               </ul>
           </div>
@@ -62,41 +73,45 @@ use Core\Language;
             <!-- Default panel contents -->
             <div class="panel-heading">Telefones</div>
               <!-- List group -->
-              <ul class="list-group">
 
-                <?php foreach ($data['phone'] as $user_phone): ?>
-                  <li class="list-group-item"><strong>Telefone: </strong><?=$user_phone['telefone'];?>
-                    <a href="#" class="btn btn-default pull-right">
-                      <span class="glyphicon glyphicon-trash pull-right"></span>
-                    </a>
-                    <a href="#" class="btn btn-default pull-right">
-                      <span class="glyphicon glyphicon-pencil pull-right"></span>
-                    </a>
-                  </li>
+                <ul class="list-group">
+                  <?php foreach ($data['phone'] as $user_phone): ?>
+                    <form action="#">
+                      <input type="hidden" name="tipo_update" value="phone" />
+                      <input type="hidden" name="id" value="<?=$user_email['id_contato']?>" />
+                      <li class="list-group-item"><strong>Telefone: </strong><input name="telefone" type="text" value="<?=$user_phone['telefone'];?>">
+                        <a href="<?=$contato['id_contato']?>" class="btn btn-default pull-right">
+                          <span class="glyphicon glyphicon-trash pull-right"></span>
+                        </a>
+                        <a href="<?=$contato['id_contato']?>" class="btn btn-default pull-right">
+                          <span class="glyphicon glyphicon-pencil pull-right"></span>
+                        </a>
+                      </li>
 
-                  <li class="list-group-item"><strong>DDD: </strong><?=$user_phone['ddd'];?>
-                    <a href="#" class="btn btn-default pull-right">
-                      <span class="glyphicon glyphicon-trash pull-right"></span>
-                    </a>
-                    <a href="#" class="btn btn-default pull-right">
-                      <span class="glyphicon glyphicon-pencil pull-right"></span>
-                    </a>
-                  </li>
+                      <li class="list-group-item"><strong>DDD: </strong><input name="ddd" type="text" value="<?=$user_phone['ddd'];?>">
+                        <a href="<?=$contato['id_contato']?>" class="btn btn-default pull-right">
+                          <span class="glyphicon glyphicon-trash pull-right"></span>
+                        </a>
+                        <a href="<?=$contato['id_contato']?>" class="btn btn-default pull-right">
+                          <span class="glyphicon glyphicon-pencil pull-right"></span>
+                        </a>
+                      </li>
 
-                  <li class="list-group-item"><strong>Tipo de telefone: </strong><?=$user_phone['phonetiponome'];?>
-                    <a href="#" class="btn btn-default pull-right">
-                      <span class="glyphicon glyphicon-trash pull-right"></span>
-                    </a>
-                    <a href="#" class="btn btn-default pull-right">
-                      <span class="glyphicon glyphicon-pencil pull-right"></span>
-                    </a>
-                  </li>
-                <?php endforeach; ?>
-                <?php if (empty($user_phone)): ?>
-                    <li class="list-group-item"><strong>Sem resultados de telefones</strong></li>
-                <?php endif;?>
+                      <li class="list-group-item"><strong>Tipo de telefone: </strong><input name="phonetiponome" type="text" value="<?=$user_phone['phonetiponome'];?>">
+                        <a href="<?=$contato['id_contato']?>" class="btn btn-default pull-right">
+                          <span class="glyphicon glyphicon-trash pull-right"></span>
+                        </a>
+                        <a href="<?=$contato['id_contato']?>" class="btn btn-default pull-right">
+                          <span class="glyphicon glyphicon-pencil pull-right"></span>
+                        </a>
+                      </li>
+                    </form>
+                    <?php endforeach; ?>
+                    <?php if (empty($user_phone)): ?>
+                        <li class="list-group-item"><strong>Sem resultados de telefones</strong></li>
+                    <?php endif;?>
+                </ul>
 
-              </ul>
           </div>
         </div>
 
@@ -107,14 +122,14 @@ use Core\Language;
 
 <!-- /.content-section-a -->
 
-    <a  name="contact"></a>
+    <!-- <a  name="contact"></a>
     <div class="banner">
 
         <div class="container">
 
             <div class="row">
                 <div class="col-lg-6">
-                    <h2>&lt;Jose Roberto&gt; &lt;/Oliveira&gt;</h2>
+                    <h2>&lt;h2&gt;Jose Roberto Oliveira&lt;/h2&gt;</h2>
                 </div>
                 <div class="col-lg-6">
                     <ul class="list-inline banner-social-buttons">
@@ -131,8 +146,8 @@ use Core\Language;
                 </div>
             </div>
 
-        </div>
+        </div> -->
         <!-- /.container -->
 
-    </div>
+    <!-- </div> -->
     <!-- /.banner -->

@@ -7,6 +7,7 @@ namespace Controllers;
 
 use Core\View;
 use Core\Controller;
+use Helpers\Request;
 
 /**
  * Sample controller showing a construct and 2 methods and their typical usage.
@@ -58,6 +59,28 @@ class PainelContatoUsuario extends Controller
         View::renderTemplate('header', $data);
         View::render('painel_contato_usuario/edit_contato_usuario', $data);
         View::renderTemplate('footer', $data);
+    }
+
+    public function PostUser($id_contato) {
+
+        $tipo = Request::post('tipo_update');
+        $id = Request::post('id');
+
+
+        switch ($tipo) {
+            case 'name':
+                Model::($id);
+                # code...
+                break;
+
+            case 'mail' :
+                # code...
+                break;
+            case 'phone':
+                # code
+                break;
+        }
+
     }
 
 

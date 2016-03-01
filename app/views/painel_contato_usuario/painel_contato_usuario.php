@@ -46,14 +46,14 @@ use Core\Language;
 </div>
 <!-- /.content-section-a -->
 
-    <a  name="contact"></a>
+    <!-- <a  name="contact"></a>
     <div class="banner">
 
         <div class="container">
 
             <div class="row">
                 <div class="col-lg-6">
-                    <h2>&lt;Jose Roberto&gt; &lt;/Oliveira&gt;</h2>
+                    <h2>&lt;h2&gt;Jose Roberto Oliveira&lt;/h2&gt;</h2>
                 </div>
                 <div class="col-lg-6">
                     <ul class="list-inline banner-social-buttons">
@@ -70,8 +70,8 @@ use Core\Language;
                 </div>
             </div>
 
-        </div>
+        </div> -->
         <!-- /.container -->
 
-    </div>
+<!--     </div> -->
     <!-- /.banner -->

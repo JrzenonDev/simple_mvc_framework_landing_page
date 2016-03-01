@@ -17,8 +17,6 @@ class PainelContatoUsuario extends Model {
                                   FROM contato c");
       return $query;
 
-
-
     }
 
     function getOneName($id_contato) {
@@ -50,6 +48,12 @@ class PainelContatoUsuario extends Model {
                                        WHERE cphone.id_contato = :id_contato",
                                        [':id_contato' => $id_contato]);
       return $phone_list;
+
+    }
+
+    function updateOneMail($id_contato) {
+
+      $query = $this->db->update("");
 
     }
 
