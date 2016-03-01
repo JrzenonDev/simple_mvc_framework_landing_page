@@ -135,7 +135,7 @@ use Core\Language;
 
             <div class="row">
                 <div class="col-lg-6">
-                    <h2>Connect to Start Bootstrap:</h2>
+                    <h2>&lt;Jose Roberto&gt; &lt;/Oliveira&gt;</h2>
                 </div>
                 <div class="col-lg-6">
                     <ul class="list-inline banner-social-buttons">
