@@ -13,11 +13,8 @@ use Core\Language;
           <table dw-loading="manifestacoes" class="table table-bordered">
             <thead>
               <tr>
+                <th>ID Contato</th>
                 <th>Nome</th>
-                <th>Email</th>
-                <th>Email Tipo</th>
-                <th>Telefone</th>
-                <th>Telefone Tipo</th>
                 <th></th>
               </tr>
             </thead>
@@ -25,11 +22,8 @@ use Core\Language;
             <tbody>
               <?php foreach($data['contatos'] as $contato):?>
               <tr>
+                <td><?=$contato['id_contato'];?></td>
                 <td><?=$contato['contatonome'];?></td>
-                <td><?=$contato['email'];?></td>
-                <td><?=$contato['emailnome'];?></td>
-                <td><?=$contato['telefone'];?></td>
-                <td><?=$contato['telnome'];?></td>
                 <td>
                   <div class="coluna-options">
                     <a href="/edit_contato_usuario/<?=$contato['id_contato']?>" class="btn btn-default">

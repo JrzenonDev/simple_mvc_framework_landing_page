@@ -16,9 +16,9 @@ use Core\Language;
         <h1>Editar dados do usuário</h1>
 
         <div class="col-sm-6">
-          <div class="panel panel-primary">
+          <div class="panel panel-primary default-jr">
             <!-- Default panel contents -->
-            <div class="panel-heading">Dados do usuário (nome, emails)</div>
+            <div class="panel-heading default-jr">Dados do usuário (nome, emails)</div>
               <!-- List group -->
               <ul class="list-group">
 
