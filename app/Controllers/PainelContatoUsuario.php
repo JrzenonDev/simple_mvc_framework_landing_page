@@ -69,15 +69,15 @@ class PainelContatoUsuario extends Controller
 
         switch ($tipo) {
             case 'name':
-                Model::($id);
-                # code...
+                updateName($id_contato);
                 break;
 
             case 'mail' :
-                # code...
+                updateOneMail($id_contato);
                 break;
+
             case 'phone':
-                # code
+                updateOnePhone($id_contato);
                 break;
         }
 

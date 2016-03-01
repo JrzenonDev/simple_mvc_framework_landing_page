@@ -51,9 +51,54 @@ class PainelContatoUsuario extends Model {
 
     }
 
+    function updateName($id_contato) {
+
+      $query = $this->db->update("UPDATE contato_email_tipo
+                                  SET nome
+                                  WHERE id_contato = :id_contato",
+                                  [':id_contato' => $id_contato]);
+
+    }
+
     function updateOneMail($id_contato) {
 
-      $query = $this->db->update("");
+      $mail = $this->db->update("UPDATE contato_email
+                                  SET email
+                                  WHERE id_contato = :id_contato",
+                                  [':id_contato' => $id_contato]);
+
+      $mail_tipo = $this->db->update("UPDATE contato_email_tipo
+                                       SET nome
+                                       WHERE id_contato = :id_contato",
+                                       [':id_contato' => $id_contato]);
+      $query = [
+        'Dados do email' => $mail,
+        'Dados de tipo de email' => $mail_tipo
+
+      ];
+
+      return $query;
+
+    }
+
+    function updateOnePhone($id_contato) {
+
+      $phone = $this->db->update("UPDATE contato_telefone
+                                  SET ddd, telefone
+                                  WHERE id_contato = :id_contato",
+                                  [':id_contato' => $id_contato]);
+
+      $phone_tipo = $this->db->update("UPDATE contato_telefone_tipo
+                                       SET nome
+                                       WHERE id_contato = :id_contato",
+                                       [':id_contato' => $id_contato]);
+      $query = [
+        'Dados do telefone' => $phone,
+        'Dados de tipo de telefone' => $phone_tipo
+
+      ];
+
+      return $query;
 
     }
 
