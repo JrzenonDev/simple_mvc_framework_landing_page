@@ -56,7 +56,7 @@ $hooks->run('afterBody');
 ?>
 
 <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
+    <nav class="navbar navbar-default navbar-fixed-top topnav nav-jr" role="navigation">
         <div class="container topnav">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">

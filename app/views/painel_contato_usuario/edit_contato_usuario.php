@@ -7,116 +7,132 @@ use Core\Language;
     <div class="row">
       <div class="col-md-12">
 
+        <!-- <a class="pull-right btn btn-default btn-logout" href="/logout" role="button">Logout</a> -->
+        <a href="/painel_contato_usuario" class="pull-right btn btn-default btn-sm btn-logout">
+          <span class="glyphicon glyphicon-arrow-left"></span> Back
+        </a>
+        <section class="page-header">
+        </section>
         <h1>Editar dados do usuário</h1>
-        <div class="col-sm-12">
-          <div class="panel panel-primary">
+
+        <div class="col-sm-6">
+          <div class="panel panel-primary default-jr">
             <!-- Default panel contents -->
-            <div class="panel-heading">Dados do usuário</div>
+            <div class="panel-heading default-jr">Dados do usuário (nome, emails)</div>
               <!-- List group -->
               <ul class="list-group">
 
-                <li class="list-group-item"><strong>Nome: </strong><?=$data['name']['contatonome'];?></li>
-                <?php foreach($data['mail'] as $user_mail):?>
-
-                <li class="list-group-item"><strong>Email: </strong><?=$user_mail['email'];?></li>
-                <?php endforeach; ?>
-
-                <li class="list-group-item">
-                  <strong>Arquivo usuário:</strong><br>
-                  <a ng-click="openLightbox(imagemUsuario)">
-                    <img class="img-detalhes" alt="..." src="/assets/image/img-teste-detalhes/22.jpg">
+                <li class="list-group-item"><strong>Nome: </strong><?=$data['name']['contatonome'];?>
+                  <a href="#" class="btn btn-default pull-right">
+                    <span class="glyphicon glyphicon-trash pull-right"></span>
+                  </a>
+                  <a href="#" class="btn btn-default pull-right">
+                    <span class="glyphicon glyphicon-pencil pull-right"></span>
                   </a>
                 </li>
+
+                <?php foreach($data['mail'] as $user_mail):?>
+                  <li class="list-group-item"><strong>Email: </strong><?=$user_mail['email'];?>
+                    <a href="#" class="btn btn-default pull-right">
+                      <span class="glyphicon glyphicon-trash pull-right"></span>
+                    </a>
+                    <a href="#" class="btn btn-default pull-right">
+                      <span class="glyphicon glyphicon-pencil pull-right"></span>
+                    </a>
+                  </li>
+                  <li class="list-group-item"><strong>Tipo de email: </strong><?=$user_mail['emailtiponome'];?>
+                    <a href="#" class="btn btn-default pull-right">
+                      <span class="glyphicon glyphicon-trash pull-right"></span>
+                    </a>
+                    <a href="#" class="btn btn-default pull-right">
+                        <span class="glyphicon glyphicon-pencil pull-right"></span>
+                    </a>
+                  </li>
+                <?php endforeach; ?>
+                <?php if (empty($user_mail)): ?>
+                  <li class="list-group-item"><strong>Sem resultados de emails</strong></li>
+                <?php endif;?>
+
               </ul>
           </div>
         </div>
 
-        <section class="page-header">
-          <a class="pull-right btn btn-default" href="/logout" role="button">Logout</a>
-          <h1>Editar dados do usuário</h1>
+        <div class="col-sm-6">
+          <div class="panel panel-primary">
+            <!-- Default panel contents -->
+            <div class="panel-heading">Telefones</div>
+              <!-- List group -->
+              <ul class="list-group">
 
-          <table dw-loading="manifestacoes" class="table table-bordered">
-            <thead>
-              <tr>
-                <th>Nome</th>
-                <th>Email</th>
-                <th>Email Tipo</th>
-                <th>DDD</th>
-                <th>Telefone</th>
-                <th>Telefone Tipo</th>
-                <th></th>
-              </tr>
-            </thead>
-
-            <tbody>
-
-              <tr>
-                <td>
-                  <input type="text" name="FirstName" value="<?=$data['name']['contatonome'];?>">
-                </td>
-
-                <?php if (!$data['name']): ?>
-                  <td>
-                    <input type="text" name="FirstName" value="Sem resultados">
-                  </td>
-                <?php endif; ?>
-
-                <?php foreach($data['mail'] as $user_mail):?>
-                <td>
-                  <input type="text" name="FirstName" value="<?=$user_mail['email'];?>">
-                </td>
-                <?php if (!$user_name['mail']): ?>
-                  <td>
-                    <input type="text" name="FirstName" value="Sem resultados">
-                  </td>
-                <?php endif; ?>
-
-                <td>
-                  <input type="text" name="FirstName" value="<?=$user_mail['emailtiponome'];?>">
-                </td>
-                <?php endforeach; ?>
-
-                <?php if (!$user_mail['mail']): ?>
-                  <p>Sem resultados</p>
-                <?php endif; ?>
-
-
-                <?php foreach($data['phone'] as $user_phone):?>
-                <td>
-                  <input type="text" name="FirstName" value="<?=$user_phone['phone'];?>">
-                </td>
-
-                <td>
-                  <input type="text" name="FirstName" value="<?=$user_phone['phonetiponome'];?>">
-                </td>
-
-                <td>
-                  <input type="text" name="FirstName" value="<?=$user_phone['ddd'];?>">
-                </td>
-                <?php endforeach; ?>
-
-                <?php if (!$user_phone['phone']): ?>
-                  <p>Sem resultados</p>
-                <?php endif; ?>
-
-                <td>
-                  <div class="coluna-options">
-                    <a href="#" class="btn btn-default">
-                      <span class="glyphicon glyphicon-pencil"></span>
+                <?php foreach ($data['phone'] as $user_phone): ?>
+                  <li class="list-group-item"><strong>Telefone: </strong><?=$user_phone['telefone'];?>
+                    <a href="#" class="btn btn-default pull-right">
+                      <span class="glyphicon glyphicon-trash pull-right"></span>
                     </a>
-                    <a href="#" class="btn btn-default">
-                      <span class="glyphicon glyphicon-trash"></span>
+                    <a href="#" class="btn btn-default pull-right">
+                      <span class="glyphicon glyphicon-pencil pull-right"></span>
                     </a>
-                  </div>
-                </td>
+                  </li>
 
-              </tr>
+                  <li class="list-group-item"><strong>DDD: </strong><?=$user_phone['ddd'];?>
+                    <a href="#" class="btn btn-default pull-right">
+                      <span class="glyphicon glyphicon-trash pull-right"></span>
+                    </a>
+                    <a href="#" class="btn btn-default pull-right">
+                      <span class="glyphicon glyphicon-pencil pull-right"></span>
+                    </a>
+                  </li>
 
-            </tbody>
-          </table>
+                  <li class="list-group-item"><strong>Tipo de telefone: </strong><?=$user_phone['phonetiponome'];?>
+                    <a href="#" class="btn btn-default pull-right">
+                      <span class="glyphicon glyphicon-trash pull-right"></span>
+                    </a>
+                    <a href="#" class="btn btn-default pull-right">
+                      <span class="glyphicon glyphicon-pencil pull-right"></span>
+                    </a>
+                  </li>
+                <?php endforeach; ?>
+                <?php if (empty($user_phone)): ?>
+                    <li class="list-group-item"><strong>Sem resultados de telefones</strong></li>
+                <?php endif;?>
 
-        </section>
+              </ul>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
 </div>
+
+<!-- /.content-section-a -->
+
+    <a  name="contact"></a>
+    <div class="banner">
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-6">
+                    <h2>&lt;Jose Roberto&gt; &lt;/Oliveira&gt;</h2>
+                </div>
+                <div class="col-lg-6">
+                    <ul class="list-inline banner-social-buttons">
+                        <li>
+                            <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/JrzenonDev/" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
+                        </li>
+                        <li>
+                            <a href="#" class="btn btn-default btn-lg"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">Linkedin</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.banner -->
