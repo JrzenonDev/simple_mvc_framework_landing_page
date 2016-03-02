@@ -69,15 +69,21 @@ class PainelContatoUsuario extends Controller
 
         switch ($tipo) {
             case 'name':
-                updateName($id_contato);
+                $name = Request::post('name');
+                $this->contatos->updateName($id_contato, $name);
                 break;
 
             case 'mail' :
-                updateOneMail($id_contato);
+                $email = Request::post('email');
+                $tipo = Request::post('emailtiponome');
+                $this->contatos->updateOneMail($id_contato, $email, $tipo);
                 break;
 
             case 'phone':
-                updateOnePhone($id_contato);
+                $phone = Request::post('telefone');
+                $phone_type = Request::post('phonetiponome');
+                $ddd = Request::post('ddd');
+                $this->contatos->updateOnePhone($id_contato, $phone, $phone_type);
                 break;
         }
 

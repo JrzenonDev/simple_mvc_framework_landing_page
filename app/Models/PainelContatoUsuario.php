@@ -51,28 +51,25 @@ class PainelContatoUsuario extends Model {
 
     }
 
-    function updateName($id_contato) {
+    function updateName($id_contato, $name) {
 
-      $query = $this->db->update("UPDATE contato_email_tipo
-                                  SET nome
-                                  WHERE id_contato = :id_contato",
-                                  [':id_contato' => $id_contato]);
+      $query = $this->db->update("contato",
+                                  ['nome' => $name],
+                                  ['id_contato' => $id_contato]);
 
       return $query;
 
     }
 
-    function updateOneMail($id_contato) {
+    function updateOneMail($id_contato, $email, $tipo) {
 
-      $mail = $this->db->update("UPDATE contato_email
-                                  SET email
-                                  WHERE id_contato = :id_contato",
-                                  [':id_contato' => $id_contato]);
+      $mail = $this->db->update("contato_email",
+                                ['email' => $email],
+                                ['id_contato' => $id_contato]);
 
-      $mail_tipo = $this->db->update("UPDATE contato_email_tipo
-                                       SET nome
-                                       WHERE id_contato = :id_contato",
-                                       [':id_contato' => $id_contato]);
+      $mail_tipo = $this->db->update("contato_email_tipo",
+                                       ['nome' => $tipo],
+                                       ['id_contato' => $id_contato]);
       $query = [
         'Dados do email' => $mail,
         'Dados de tipo de email' => $mail_tipo
@@ -83,17 +80,15 @@ class PainelContatoUsuario extends Model {
 
     }
 
-    function updateOnePhone($id_contato) {
+    function updateOnePhone($id_contato, $phone, $phone_type, $ddd) {
 
-      $phone = $this->db->update("UPDATE contato_telefone
-                                  SET ddd, telefone
-                                  WHERE id_contato = :id_contato",
-                                  [':id_contato' => $id_contato]);
+      $phone = $this->db->update("contato_telefone",
+                                  ['ddd' => $ddd, 'telefone' => $phone],
+                                  ['id_contato' => $id_contato]);
 
-      $phone_tipo = $this->db->update("UPDATE contato_telefone_tipo
-                                       SET nome
-                                       WHERE id_contato = :id_contato",
-                                       [':id_contato' => $id_contato]);
+      $phone_type = $this->db->update("contato_telefone_tipo",
+                                       ['nome' => $phone_type],
+                                       ['id_contato' => $id_contato]);
       $query = [
         'Dados do telefone' => $phone,
         'Dados de tipo de telefone' => $phone_tipo

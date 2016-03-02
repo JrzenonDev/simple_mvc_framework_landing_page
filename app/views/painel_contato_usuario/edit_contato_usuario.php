@@ -24,39 +24,33 @@ use Core\Language;
               <!-- List group -->
               <ul class="list-group">
 
-              <form action="">
+              <form action="" method="POST">
               <input type="hidden" name="tipo_update" value="name" />
               <input type="hidden" name="id" value="<?=$user_email['id_contato']?>" />
-                <li class="list-group-item"><strong>Nome: </strong><input name="nome"
+                <li class="list-group-item"><strong>Nome: </strong><input name="name"
                     type="text" value="<?=$data['name']['contatonome'];?>">
-                  <a href="<?=$contato['id_contato']?>" class="btn btn-default pull-right">
+                  <button type="submit" class="btn btn-default pull-right">
                     <span class="glyphicon glyphicon-trash pull-right"></span>
-                  </a>
-                  <a href="<?=$contato['id_contato']?>" class="btn btn-default pull-right">
+                  </button>
+                  <button type="submit" class="btn btn-default pull-right">
                     <span class="glyphicon glyphicon-pencil pull-right"></span>
-                  </a>
+                  </button>
                 </li>
                </form>
 
                   <?php foreach($data['mail'] as $user_mail):?>
-                    <form action="">
+                    <form action="" method="POST">
                       <input type="hidden" name="tipo_update" value="mail" />
                       <input type="hidden" name="id" value="<?=$user_email['id_contato']?>" />
                       <li class="list-group-item"><strong>Email: </strong><input name="email" type="text" value="<?=$user_mail['email'];?>">
-                        <a href="<?=$contato['id_contato']?>" class="btn btn-default pull-right">
+                        <button type="submit" class="btn btn-default pull-right">
                           <span class="glyphicon glyphicon-trash pull-right"></span>
-                        </a>
-                        <a href="<?=$contato['id_contato']?>" class="btn btn-default pull-right">
-                          <span class="glyphicon glyphicon-pencil pull-right"></span>
-                        </a>
+                        </button>
+                        <button type="submit" class="btn btn-default pull-right">
+                            <span class="glyphicon glyphicon-pencil pull-right"></span>
+                        </button>
                       </li>
                       <li class="list-group-item"><strong>Tipo de email: </strong><input name="emailtiponome" type="text" value="<?=$user_mail['emailtiponome'];?>">
-                        <a href="<?=$contato['id_contato']?>" class="btn btn-default pull-right">
-                          <span class="glyphicon glyphicon-trash pull-right"></span>
-                        </a>
-                        <a href="<?=$contato['id_contato']?>" class="btn btn-default pull-right">
-                            <span class="glyphicon glyphicon-pencil pull-right"></span>
-                        </a>
                       </li>
                     </form>
                   <?php endforeach; ?>
@@ -76,34 +70,22 @@ use Core\Language;
 
                 <ul class="list-group">
                   <?php foreach ($data['phone'] as $user_phone): ?>
-                    <form action="">
+                    <form action="" method="POST">
                       <input type="hidden" name="tipo_update" value="phone" />
                       <input type="hidden" name="id" value="<?=$user_email['id_contato']?>" />
                       <li class="list-group-item"><strong>Telefone: </strong><input name="telefone" type="text" value="<?=$user_phone['telefone'];?>">
-                        <a href="<?=$contato['id_contato']?>" class="btn btn-default pull-right">
+                        <button type="submit" class="btn btn-default pull-right">
                           <span class="glyphicon glyphicon-trash pull-right"></span>
-                        </a>
-                        <a href="<?=$contato['id_contato']?>" class="btn btn-default pull-right">
+                        </button>
+                        <button type="submit" class="btn btn-default pull-right">
                           <span class="glyphicon glyphicon-pencil pull-right"></span>
-                        </a>
+                        </button>
                       </li>
 
                       <li class="list-group-item"><strong>DDD: </strong><input name="ddd" type="text" value="<?=$user_phone['ddd'];?>">
-                        <a href="<?=$contato['id_contato']?>" class="btn btn-default pull-right">
-                          <span class="glyphicon glyphicon-trash pull-right"></span>
-                        </a>
-                        <a href="<?=$contato['id_contato']?>" class="btn btn-default pull-right">
-                          <span class="glyphicon glyphicon-pencil pull-right"></span>
-                        </a>
                       </li>
 
                       <li class="list-group-item"><strong>Tipo de telefone: </strong><input name="phonetiponome" type="text" value="<?=$user_phone['phonetiponome'];?>">
-                        <a href="<?=$contato['id_contato']?>" class="btn btn-default pull-right">
-                          <span class="glyphicon glyphicon-trash pull-right"></span>
-                        </a>
-                        <a href="<?=$contato['id_contato']?>" class="btn btn-default pull-right">
-                          <span class="glyphicon glyphicon-pencil pull-right"></span>
-                        </a>
                       </li>
                     </form>
                     <?php endforeach; ?>
