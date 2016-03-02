@@ -50,7 +50,10 @@ use Core\Language;
                             <span class="glyphicon glyphicon-pencil pull-right"></span>
                         </button>
                       </li>
-                      <li class="list-group-item"><strong>Tipo de email: </strong><input name="emailtiponome" type="text" value="<?=$user_mail['emailtiponome'];?>">
+                      <li class="list-group-item" name="emailtiponome" value="<?=$user_mail['emailtiponome'];?>"><strong>Tipo de email: </strong>
+                        <select name="carlist" form="carform">
+                          <option value="<?=$user_mail['emailtiponome'];?>"><?=$user_mail['emailtiponome'];?></option>
+                        </select>
                       </li>
                     </form>
                   <?php endforeach; ?>

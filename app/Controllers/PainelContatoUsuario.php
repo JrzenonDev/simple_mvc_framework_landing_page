@@ -87,9 +87,6 @@ class PainelContatoUsuario extends Controller
                 break;
         }
 
+        $this->getUser($id_contato);
     }
-
-
-
-
 }
