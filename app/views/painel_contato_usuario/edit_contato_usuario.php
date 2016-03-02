@@ -24,7 +24,7 @@ use Core\Language;
               <!-- List group -->
               <ul class="list-group">
 
-              <form action="#">
+              <form action="">
               <input type="hidden" name="tipo_update" value="name" />
               <input type="hidden" name="id" value="<?=$user_email['id_contato']?>" />
                 <li class="list-group-item"><strong>Nome: </strong><input name="nome"
@@ -39,7 +39,7 @@ use Core\Language;
                </form>
 
                   <?php foreach($data['mail'] as $user_mail):?>
-                    <form action="#">
+                    <form action="">
                       <input type="hidden" name="tipo_update" value="mail" />
                       <input type="hidden" name="id" value="<?=$user_email['id_contato']?>" />
                       <li class="list-group-item"><strong>Email: </strong><input name="email" type="text" value="<?=$user_mail['email'];?>">
@@ -76,7 +76,7 @@ use Core\Language;
 
                 <ul class="list-group">
                   <?php foreach ($data['phone'] as $user_phone): ?>
-                    <form action="#">
+                    <form action="">
                       <input type="hidden" name="tipo_update" value="phone" />
                       <input type="hidden" name="id" value="<?=$user_email['id_contato']?>" />
                       <li class="list-group-item"><strong>Telefone: </strong><input name="telefone" type="text" value="<?=$user_phone['telefone'];?>">

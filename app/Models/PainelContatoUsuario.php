@@ -58,6 +58,8 @@ class PainelContatoUsuario extends Model {
                                   WHERE id_contato = :id_contato",
                                   [':id_contato' => $id_contato]);
 
+      return $query;
+
     }
 
     function updateOneMail($id_contato) {
