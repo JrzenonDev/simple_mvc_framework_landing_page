@@ -32,8 +32,6 @@ class PainelContatoUsuario extends Model {
 
       $mail_list = $this->db->select("SELECT cemail.id_contato, cemail.email,
                                              cemail.id_contato_email_tipo AS email_id_tipo,
-                                             cemailtipo.nome AS emailtiponome,
-                                             cemailtipo.id_contato_email_tipo AS tipo_id_tipo
                                        FROM contato_email cemail
                                        JOIN contato_email_tipo cemailtipo
                                        ON cemail.id_contato_email_tipo = cemailtipo.id_contato_email_tipo

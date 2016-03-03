@@ -53,7 +53,12 @@ use Core\Language;
                       <li class="list-group-item" name="emailtiponome" value="<?=$user_mail['emailtiponome'];?>"><strong>Tipo de email: </strong>
                         <select name="emailtiponome" form="">
                           <?php foreach($data['mail_type'] as $mail_type):?>
-                          <option value="<?=$mail_type['email_tipo_nome'];?>">
+                          <option
+                            value="<?=$mail_type['id_contato_email_tipo'];?>"
+                          <?php if($mail_type['id_contato_email_tipo'] == $user_mail['email_id_tipo']): ?>
+                            selected
+                          <?php endif; ?>
+                          >
                             <?=$mail_type['email_tipo_nome'];?>
                           </option>
                         <?php endforeach; ?>
