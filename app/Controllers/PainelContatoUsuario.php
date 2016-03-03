@@ -50,9 +50,11 @@ class PainelContatoUsuario extends Controller
 
         $data['name'] = $this->contatos->getOneName($id_contato);
         $data['mail'] = $this->contatos->getOneMail($id_contato);
+        $data['mail_type'] = $this->contatos->getMailType();
         $data['phone'] = $this->contatos->getOnePhone($id_contato);
+        $data['phone_type'] = $this->contatos->getPhoneType();
 
-            // var_dump($user_mail);
+            // var_dump($data['mail_type']);
             // var_dump('aaa');
             // die();
 

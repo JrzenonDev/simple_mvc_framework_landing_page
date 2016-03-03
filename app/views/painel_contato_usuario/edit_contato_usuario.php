@@ -51,8 +51,12 @@ use Core\Language;
                         </button>
                       </li>
                       <li class="list-group-item" name="emailtiponome" value="<?=$user_mail['emailtiponome'];?>"><strong>Tipo de email: </strong>
-                        <select name="carlist" form="carform">
-                          <option value="<?=$user_mail['emailtiponome'];?>"><?=$user_mail['emailtiponome'];?></option>
+                        <select name="emailtiponome" form="">
+                          <?php foreach($data['mail_type'] as $mail_type):?>
+                          <option value="<?=$mail_type['email_tipo_nome'];?>">
+                            <?=$mail_type['email_tipo_nome'];?>
+                          </option>
+                        <?php endforeach; ?>
                         </select>
                       </li>
                     </form>
@@ -88,7 +92,14 @@ use Core\Language;
                       <li class="list-group-item"><strong>DDD: </strong><input name="ddd" type="text" value="<?=$user_phone['ddd'];?>">
                       </li>
 
-                      <li class="list-group-item"><strong>Tipo de telefone: </strong><input name="phonetiponome" type="text" value="<?=$user_phone['phonetiponome'];?>">
+                      <li class="list-group-item"><strong>Tipo de telefone: </strong>
+                      <select name="phonetiponome" form="">
+                          <?php foreach($data['phone_type'] as $phone_type):?>
+                          <option value="<?=$user_phone['phonetiponome'];?>">
+                            <?=$phone_type['phone_tipo_nome'];?>
+                          </option>
+                        <?php endforeach; ?>
+                        </select>
                       </li>
                     </form>
                     <?php endforeach; ?>
