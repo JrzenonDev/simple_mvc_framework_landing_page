@@ -46,13 +46,14 @@ class PainelContatoUsuario extends Controller
         View::renderTemplate('footer', $data);
     }
 
-    public function GetUser($id_contato) {
+    public function GetUser($id_contato, $messages = []) {
 
         $data['name'] = $this->contatos->getOneName($id_contato);
         $data['mail'] = $this->contatos->getOneMail($id_contato);
         $data['mail_type'] = $this->contatos->getMailType();
         $data['phone'] = $this->contatos->getOnePhone($id_contato);
         $data['phone_type'] = $this->contatos->getPhoneType();
+        $data['messages'] = $messages;
 
             // var_dump($data['mail_type']);
             // var_dump('aaa');
@@ -66,11 +67,12 @@ class PainelContatoUsuario extends Controller
     public function PostUser($id_contato) {
         $tipo = Request::post('tipo_update');
         $id = Request::post('id');
+        $messages = [];
 
         switch ($tipo) {
             case 'name':
                 $name = Request::post('name');
-                $this->contatos->updateName($id_contato, $name);
+                $messages = $this->contatos->updateName($id_contato, $name);
                 break;
 
             case 'mail' :
@@ -81,12 +83,12 @@ class PainelContatoUsuario extends Controller
 
             case 'phone':
                 $phone = Request::post('telefone');
-                $phone_type = Request::post('phonetiponome');
                 $ddd = Request::post('ddd');
-                $this->contatos->updateOnePhone($id, $phone, $phone_type);
+                $phone_type = Request::post('id_contato_telefone_tipo');
+                $this->contatos->updateOnePhone($id, $phone, $phone_type, $ddd);
                 break;
         }
 
-        $this->getUser($id_contato);
+        $this->getUser($id_contato, $messages);
     }
 }

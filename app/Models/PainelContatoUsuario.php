@@ -53,7 +53,7 @@ class PainelContatoUsuario extends Model {
 
     function getOnePhone($id_contato) {
 
-      $phone_list = $this->db->select("SELECT cphone.id_contato_telefone, cphone.id_contato, cphone.ddd, cphone.telefone, cphone.id_contato_telefone_tipo
+      $phone_list = $this->db->select("SELECT cphone.id_contato_telefone, cphone.id_contato, cphone.ddd, cphone.telefone, cphone.id_contato_telefone_tipo AS id_contato_tipo
                                        FROM contato_telefone cphone
                                        WHERE cphone.id_contato = :id_contato",
                                        [':id_contato' => $id_contato]);
@@ -76,7 +76,21 @@ class PainelContatoUsuario extends Model {
                                   ['nome' => $name],
                                   ['id_contato' => $id_contato]);
 
-      return $query;
+      if ($query) {
+        return [
+          [
+            'type' => 'success',
+            'text' => 'Atualizado com sucesso'
+          ]
+        ];
+      } else {
+        return [
+          [
+            'type' => 'danger',
+            'text' => 'Erro'
+          ]
+        ];
+      }
 
     }
 
@@ -85,15 +99,16 @@ class PainelContatoUsuario extends Model {
                                 ['email' => $email, 'id_contato_email_tipo' => $tipo_email],
                                 ['id_contato_email' => $id_contato_email]);
 
+
       return $query;
 
     }
 
-    function updateOnePhone($id_contato, $phone, $phone_type, $ddd) {
+    function updateOnePhone($id_contato_telefone, $phone, $phone_type, $ddd) {
 
       $query = $this->db->update("contato_telefone",
-                                  ['ddd' => $ddd, 'telefone' => $phone, 'id_contato_telefone' => $phone_type],
-                                  ['id_contato' => $id_contato]);
+                                  ['telefone' => $phone, 'ddd' => $ddd, 'id_contato_telefone_tipo' => $phone_type],
+                                  ['id_contato_telefone' => $id_contato_telefone]);
 
       return $query;
 
