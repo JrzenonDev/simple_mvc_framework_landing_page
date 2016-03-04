@@ -64,10 +64,8 @@ class PainelContatoUsuario extends Controller
     }
 
     public function PostUser($id_contato) {
-
         $tipo = Request::post('tipo_update');
         $id = Request::post('id');
-
 
         switch ($tipo) {
             case 'name':
@@ -77,15 +75,15 @@ class PainelContatoUsuario extends Controller
 
             case 'mail' :
                 $email = Request::post('email');
-                $tipo = Request::post('emailtiponome');
-                $this->contatos->updateOneMail($id_contato, $email, $tipo);
+                $tipo_email = Request::post('id_contato_email_tipo');
+                $this->contatos->updateOneMail($id, $email, $tipo_email);
                 break;
 
             case 'phone':
                 $phone = Request::post('telefone');
                 $phone_type = Request::post('phonetiponome');
                 $ddd = Request::post('ddd');
-                $this->contatos->updateOnePhone($id_contato, $phone, $phone_type);
+                $this->contatos->updateOnePhone($id, $phone, $phone_type);
                 break;
         }
 

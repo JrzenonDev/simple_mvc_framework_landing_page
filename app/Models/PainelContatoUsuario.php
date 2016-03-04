@@ -30,11 +30,9 @@ class PainelContatoUsuario extends Model {
 
     function getOneMail($id_contato) {
 
-      $mail_list = $this->db->select("SELECT cemail.id_contato, cemail.email,
-                                             cemail.id_contato_email_tipo AS email_id_tipo,
+      $mail_list = $this->db->select("SELECT cemail.id_contato_email,  cemail.id_contato, cemail.email,
+                                             cemail.id_contato_email_tipo AS email_id_tipo
                                        FROM contato_email cemail
-                                       JOIN contato_email_tipo cemailtipo
-                                       ON cemail.id_contato_email_tipo = cemailtipo.id_contato_email_tipo
                                        WHERE cemail.id_contato = :id_contato",
                                        [':id_contato' => $id_contato]);
 
@@ -55,9 +53,8 @@ class PainelContatoUsuario extends Model {
 
     function getOnePhone($id_contato) {
 
-      $phone_list = $this->db->select("SELECT cphone.id_contato, cphone.ddd, cphone.telefone, cphonetipo.nome AS phonetiponome
+      $phone_list = $this->db->select("SELECT cphone.id_contato_telefone, cphone.id_contato, cphone.ddd, cphone.telefone, cphone.id_contato_telefone_tipo
                                        FROM contato_telefone cphone
-                                       JOIN contato_telefone_tipo cphonetipo ON cphone.id_contato_telefone_tipo = cphonetipo.id_contato_telefone_tipo
                                        WHERE cphone.id_contato = :id_contato",
                                        [':id_contato' => $id_contato]);
       return $phone_list;
@@ -83,20 +80,10 @@ class PainelContatoUsuario extends Model {
 
     }
 
-    function updateOneMail($id_contato, $email, $tipo) {
-
-      $mail = $this->db->update("contato_email",
-                                ['email' => $email],
-                                ['id_contato' => $id_contato]);
-
-      $mail_tipo = $this->db->update("contato_email_tipo",
-                                       ['nome' => $tipo],
-                                       ['id_contato' => $id_contato]);
-      $query = [
-        'Dados do email' => $mail,
-        'Dados de tipo de email' => $mail_tipo
-
-      ];
+    function updateOneMail($id_contato_email, $email, $tipo_email) {
+      $query = $this->db->update("contato_email",
+                                ['email' => $email, 'id_contato_email_tipo' => $tipo_email],
+                                ['id_contato_email' => $id_contato_email]);
 
       return $query;
 
@@ -104,18 +91,9 @@ class PainelContatoUsuario extends Model {
 
     function updateOnePhone($id_contato, $phone, $phone_type, $ddd) {
 
-      $phone = $this->db->update("contato_telefone",
-                                  ['ddd' => $ddd, 'telefone' => $phone],
+      $query = $this->db->update("contato_telefone",
+                                  ['ddd' => $ddd, 'telefone' => $phone, 'id_contato_telefone' => $phone_type],
                                   ['id_contato' => $id_contato]);
-
-      $phone_type = $this->db->update("contato_telefone_tipo",
-                                       ['nome' => $phone_type],
-                                       ['id_contato' => $id_contato]);
-      $query = [
-        'Dados do telefone' => $phone,
-        'Dados de tipo de telefone' => $phone_tipo
-
-      ];
 
       return $query;
 
