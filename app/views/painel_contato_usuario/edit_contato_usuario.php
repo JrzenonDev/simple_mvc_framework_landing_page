@@ -1,6 +1,7 @@
 <?php
 use Core\Language;
 ?>
+<pre style="margin-top: 60px;"><?php var_dump($data['messages']);?></pre>
 <div class="intro-header-pages">
 
   <div class="container-fluid">
@@ -20,6 +21,9 @@ use Core\Language;
             <!-- Default panel contents -->
             <div class="panel-heading default-jr">Dados do usuário (nome, emails)</div>
 
+            <?php foreach($data['messages'] as $message):?>
+              <div class="alert alert-<?=$message['type']; ?>"><?=$message['text'];?></div>
+            <?php endforeach; ?>
 
               <!-- List group -->
               <ul class="list-group">
@@ -41,7 +45,7 @@ use Core\Language;
                   <?php foreach($data['mail'] as $user_mail):?>
                     <form action="" method="POST">
                       <input type="hidden" name="tipo_update" value="mail" />
-                      <input type="hidden" name="id" value="<?=$user_email['id_contato']?>" />
+                      <input type="hidden" name="id" value="<?=$user_mail['id_contato_email']?>" />
                       <li class="list-group-item"><strong>Email: </strong><input name="email" type="text" value="<?=$user_mail['email'];?>">
                         <button type="submit" class="btn btn-default pull-right">
                           <span class="glyphicon glyphicon-trash pull-right"></span>
@@ -50,8 +54,8 @@ use Core\Language;
                             <span class="glyphicon glyphicon-pencil pull-right"></span>
                         </button>
                       </li>
-                      <li class="list-group-item" name="emailtiponome" value="<?=$user_mail['emailtiponome'];?>"><strong>Tipo de email: </strong>
-                        <select name="emailtiponome" form="">
+                      <li class="list-group-item"><strong>Tipo de email: </strong>
+                        <select name="id_contato_email_tipo">
                           <?php foreach($data['mail_type'] as $mail_type):?>
                           <option
                             value="<?=$mail_type['id_contato_email_tipo'];?>"
@@ -84,7 +88,7 @@ use Core\Language;
                   <?php foreach ($data['phone'] as $user_phone): ?>
                     <form action="" method="POST">
                       <input type="hidden" name="tipo_update" value="phone" />
-                      <input type="hidden" name="id" value="<?=$user_email['id_contato']?>" />
+                      <input type="hidden" name="id" value="<?=$user_phone['id_contato_telefone']?>" />
                       <li class="list-group-item"><strong>Telefone: </strong><input name="telefone" type="text" value="<?=$user_phone['telefone'];?>">
                         <button type="submit" class="btn btn-default pull-right">
                           <span class="glyphicon glyphicon-trash pull-right"></span>
@@ -98,13 +102,20 @@ use Core\Language;
                       </li>
 
                       <li class="list-group-item"><strong>Tipo de telefone: </strong>
-                      <select name="phonetiponome" form="">
+
+                        <select name="id_contato_telefone_tipo">
                           <?php foreach($data['phone_type'] as $phone_type):?>
-                          <option value="<?=$user_phone['phonetiponome'];?>">
+                          <option
+                            value="<?=$phone_type['id_contato_telefone_tipo'];?>"
+                          <?php if($phone_type['id_contato_telefone_tipo'] == $user_phone['id_contato_tipo']): ?>
+                            selected
+                          <?php endif; ?>
+                          >
                             <?=$phone_type['phone_tipo_nome'];?>
                           </option>
                         <?php endforeach; ?>
                         </select>
+
                       </li>
                     </form>
                     <?php endforeach; ?>

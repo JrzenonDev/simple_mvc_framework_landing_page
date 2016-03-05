@@ -28,6 +28,18 @@ class PainelContatoUsuario extends Model {
       return $name_list[0];
     }
 
+    function getOneMail($id_contato) {
+
+      $mail_list = $this->db->select("SELECT cemail.id_contato_email,  cemail.id_contato, cemail.email,
+                                             cemail.id_contato_email_tipo AS email_id_tipo
+                                       FROM contato_email cemail
+                                       WHERE cemail.id_contato = :id_contato",
+                                       [':id_contato' => $id_contato]);
+
+
+      return $mail_list;
+
+    }
 
     function getMailType() {
 
@@ -39,22 +51,9 @@ class PainelContatoUsuario extends Model {
 
     }
 
-    function getOneMail($id_contato) {
-
-      $mail_list = $this->db->select("SELECT cemail.id_contato, cemail.email,
-                                             cemail.id_contato_email_tipo AS email_id_tipo
-                                       FROM contato_email cemail
-                                       WHERE cemail.id_contato = :id_contato",
-                                       [':id_contato' => $id_contato]);
-
-
-      return $mail_list;
-
-    }
-
     function getOnePhone($id_contato) {
 
-      $phone_list = $this->db->select("SELECT cphone.id_contato, cphone.ddd, cphone.telefone, cphone.id_contato_telefone_tipo
+      $phone_list = $this->db->select("SELECT cphone.id_contato_telefone, cphone.id_contato, cphone.ddd, cphone.telefone, cphone.id_contato_telefone_tipo AS id_contato_tipo
                                        FROM contato_telefone cphone
                                        WHERE cphone.id_contato = :id_contato",
                                        [':id_contato' => $id_contato]);
@@ -77,43 +76,39 @@ class PainelContatoUsuario extends Model {
                                   ['nome' => $name],
                                   ['id_contato' => $id_contato]);
 
+      if ($query) {
+        return [
+          [
+            'type' => 'success',
+            'text' => 'Atualizado com sucesso'
+          ]
+        ];
+      } else {
+        return [
+          [
+            'type' => 'danger',
+            'text' => 'Erro'
+          ]
+        ];
+      }
+
+    }
+
+    function updateOneMail($id_contato_email, $email, $tipo_email) {
+      $query = $this->db->update("contato_email",
+                                ['email' => $email, 'id_contato_email_tipo' => $tipo_email],
+                                ['id_contato_email' => $id_contato_email]);
+
+
       return $query;
 
     }
 
-    // function updateOneMail($id_contato, $email, $tipo) {
+    function updateOnePhone($id_contato_telefone, $phone, $phone_type, $ddd) {
 
-    //   $mail = $this->db->update("contato_email",
-    //                             ['email' => $email],
-    //                             ['id_contato' => $id_contato]);
-
-    //   $mail_tipo = $this->db->update("contato_email_tipo",
-    //                                    ['nome' => $tipo],
-    //                                    ['id_contato' => $id_contato]);
-    //   $query = [
-    //     'Dados do email' => $mail,
-    //     'Dados de tipo de email' => $mail_tipo
-
-    //   ];
-
-    //   return $query;
-
-    // }
-
-    function updateOnePhone($id_contato, $phone, $phone_type, $ddd) {
-
-      $phone = $this->db->update("contato_telefone",
-                                  ['ddd' => $ddd, 'telefone' => $phone],
-                                  ['id_contato' => $id_contato]);
-
-      $phone_type = $this->db->update("contato_telefone_tipo",
-                                       ['nome' => $phone_type],
-                                       ['id_contato' => $id_contato]);
-      $query = [
-        'Dados do telefone' => $phone,
-        'Dados de tipo de telefone' => $phone_tipo
-
-      ];
+      $query = $this->db->update("contato_telefone",
+                                  ['telefone' => $phone, 'ddd' => $ddd, 'id_contato_telefone_tipo' => $phone_type],
+                                  ['id_contato_telefone' => $id_contato_telefone]);
 
       return $query;
 
