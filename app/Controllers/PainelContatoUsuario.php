@@ -78,14 +78,14 @@ class PainelContatoUsuario extends Controller
             case 'mail' :
                 $email = Request::post('email');
                 $tipo_email = Request::post('id_contato_email_tipo');
-                $this->contatos->updateOneMail($id, $email, $tipo_email);
+                $messages = $this->contatos->updateOneMail($id, $email, $tipo_email);
                 break;
 
             case 'phone':
                 $phone = Request::post('telefone');
                 $ddd = Request::post('ddd');
                 $phone_type = Request::post('id_contato_telefone_tipo');
-                $this->contatos->updateOnePhone($id, $phone, $phone_type, $ddd);
+                $messages = $this->contatos->updateOnePhone($id, $phone, $phone_type, $ddd);
                 break;
         }
 

@@ -16,15 +16,16 @@ use Core\Language;
         </section>
         <h1>Editar dados do usuário</h1>
 
+        <div class="col-sm-12">
+          <?php foreach($data['messages'] as $message):?>
+            <div class="alert-hide alert alert-<?=$message['type']; ?>"><?=$message['text'];?></div>
+          <?php endforeach; ?>
+        </div>
+
         <div class="col-sm-6">
           <div class="panel panel-primary default-jr">
             <!-- Default panel contents -->
             <div class="panel-heading default-jr">Dados do usuário (nome, emails)</div>
-
-            <?php foreach($data['messages'] as $message):?>
-              <div class="alert alert-<?=$message['type']; ?>"><?=$message['text'];?></div>
-            <?php endforeach; ?>
-
               <!-- List group -->
               <ul class="list-group">
 
@@ -85,6 +86,7 @@ use Core\Language;
               <!-- List group -->
 
                 <ul class="list-group">
+
                   <?php foreach ($data['phone'] as $user_phone): ?>
                     <form action="" method="POST">
                       <input type="hidden" name="tipo_update" value="phone" />
@@ -130,6 +132,7 @@ use Core\Language;
       </div>
     </div>
   </div>
+
 </div>
 
 <!-- /.content-section-a -->

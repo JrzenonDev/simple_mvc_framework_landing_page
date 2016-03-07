@@ -80,14 +80,14 @@ class PainelContatoUsuario extends Model {
         return [
           [
             'type' => 'success',
-            'text' => 'Atualizado com sucesso'
+            'text' => 'Nome atualizado com sucesso'
           ]
         ];
       } else {
         return [
           [
             'type' => 'danger',
-            'text' => 'Erro'
+            'text' => 'Erro nome'
           ]
         ];
       }
@@ -99,8 +99,24 @@ class PainelContatoUsuario extends Model {
                                 ['email' => $email, 'id_contato_email_tipo' => $tipo_email],
                                 ['id_contato_email' => $id_contato_email]);
 
+      if ($query) {
+        return [
+          [
+            'type' => 'success',
+            'text' => 'Email atualizado com sucesso'
+          ]
+        ];
+      } else {
+        return [
+          [
+            'type' => 'danger',
+            'text' => 'Erro email'
+          ]
+        ];
+      }
 
-      return $query;
+
+      //return $query;
 
     }
 
@@ -110,7 +126,23 @@ class PainelContatoUsuario extends Model {
                                   ['telefone' => $phone, 'ddd' => $ddd, 'id_contato_telefone_tipo' => $phone_type],
                                   ['id_contato_telefone' => $id_contato_telefone]);
 
-      return $query;
+      if ($query) {
+        return [
+          [
+            'type' => 'success',
+            'text' => 'Telefone atualizado com sucesso'
+          ]
+        ];
+      } else {
+        return [
+          [
+            'type' => 'danger',
+            'text' => 'Erro telefone'
+          ]
+        ];
+      }
+
+      //return $query;
 
     }
 

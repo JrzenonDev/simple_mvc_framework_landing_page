@@ -1,0 +1,31 @@
+/* latin-ext */
+@font-face {
+  font-family: 'Istok Web';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Istok Web Regular'), local('IstokWeb-Regular'), url('../fonts/Istok_Web/IstokWeb-Regular.ttf');
+}
+
+/* latin-ext */
+@font-face {
+  font-family: 'Istok Web';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Istok Web Bold'), local('IstokWeb-Bold'), url'../fonts/Istok_Web/IstokWeb-Bold.ttf';
+}
+
+/* latin-ext */
+@font-face {
+  font-family: 'Istok Web';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Istok Web Italic'), local('IstokWeb-Italic'), url'../fonts/Istok_Web/IstokWeb-Italic.ttf';
+}
+
+/* latin-ext */
+@font-face {
+  font-family: 'Istok Web';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Istok Web Bold Italic'), local('IstokWeb-BoldItalic'), url('../fonts/Istok_Web/IstokWeb-BoldItalic.ttf');
+}

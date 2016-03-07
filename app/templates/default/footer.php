@@ -42,7 +42,7 @@ $hooks = Hooks::get();
 
     <?php
     Assets::js(array(
-        Url::templatePath() . 'js/jquery.js',
+        '//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js',
         '//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js'
     ));
 
@@ -52,6 +52,14 @@ $hooks = Hooks::get();
     //hook for plugging in code into the footer
     $hooks->run('footer');
     ?>
+
+<script>
+$(function() {
+    $(".alert-hide").fadeTo(2000, 500).slideUp(500, function(){
+        $("#alert-hide").alert('close');
+    });
+});
+</script>
 
 </body>
 
