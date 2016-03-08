@@ -220,4 +220,5 @@ class Database extends PDO
     {
         return $this->exec("TRUNCATE TABLE $table");
     }
+
 }

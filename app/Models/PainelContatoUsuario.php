@@ -185,4 +185,45 @@ class PainelContatoUsuario extends Model {
 
     }
 
+    public function deleteName($id_contato) {
+
+      $delete = $this->db->delete('contato', ['id_contato' => $id_contato]);
+    }
+
+
+
+     public function deletarPendente($id) {
+        $result = [
+            'success' => false,
+            'messages' => []
+        ];
+
+        $this->db->beginTransaction();
+
+        try {
+            $delete_count = $this->db->delete('professor_login_pendente', ['login_pendente_id' => $id]);
+
+            if (!$delete_count) {
+                $result['messages'][] = ['type' => "danger", 'text' => "Erro ao deletar login da base de dados."];
+                $this->db->rollBack();
+                return $result;
+            } else {
+                $result['success'] = true;
+            }
+
+        } catch (\Exception $Exception) {
+            $result['messages'][] = ['type' => "danger", 'text' => "Erro ao deletar login."];
+            switch ($Exception->getCode()) {
+                default:
+                    $result['messages'][] = ['type' => "danger", 'text' => $Exception->getCode()." - ".$Exception->getMessage()];
+                    break;
+            }
+            $this->db->rollBack();
+            return $result;
+        }
+
+        $this->db->commit();
+        return $result;
+    }
+
 }
