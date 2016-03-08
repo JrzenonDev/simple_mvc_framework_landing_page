@@ -72,6 +72,16 @@ class PainelContatoUsuario extends Model {
 
     function updateName($id_contato, $name) {
 
+      if (empty($name)) {
+        return  [
+          [
+            'type' => 'danger',
+            'text' => 'Nome não pode ser vazio!'
+          ]
+        ];
+      }
+      //var_dump($name); die();
+
       $query = $this->db->update("contato",
                                   ['nome' => $name],
                                   ['id_contato' => $id_contato]);
@@ -95,6 +105,26 @@ class PainelContatoUsuario extends Model {
     }
 
     function updateOneMail($id_contato_email, $email, $tipo_email) {
+
+      if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        //$emailErr = "Invalid email format";
+        return  [
+          [
+            'type' => 'danger',
+            'text' => 'Formato inválido!'
+          ]
+        ];
+      }
+
+      if (empty($email_validate) && empty($tipo_email)) {
+        return  [
+          [
+            'type' => 'danger',
+            'text' => 'Favor preencher os campos de email!'
+          ]
+        ];
+      }
+
       $query = $this->db->update("contato_email",
                                 ['email' => $email, 'id_contato_email_tipo' => $tipo_email],
                                 ['id_contato_email' => $id_contato_email]);
@@ -121,6 +151,15 @@ class PainelContatoUsuario extends Model {
     }
 
     function updateOnePhone($id_contato_telefone, $phone, $phone_type, $ddd) {
+
+      if (empty($phone) && empty($phone_type) && empty($ddd)) {
+        return  [
+          [
+            'type' => 'danger',
+            'text' => 'Favor preencher os campos de telefone!'
+          ]
+        ];
+      }
 
       $query = $this->db->update("contato_telefone",
                                   ['telefone' => $phone, 'ddd' => $ddd, 'id_contato_telefone_tipo' => $phone_type],

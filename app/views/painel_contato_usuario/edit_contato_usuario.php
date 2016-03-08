@@ -34,10 +34,10 @@ use Core\Language;
               <input type="hidden" name="id" value="<?=$user_email['id_contato']?>" />
                 <li class="list-group-item"><strong>Nome: </strong><input name="name"
                     type="text" value="<?=$data['name']['contatonome'];?>">
-                  <button type="submit" class="btn btn-default pull-right">
+                  <button type="submit" onClick="submit()" class="btn btn-default pull-right">
                     <span class="glyphicon glyphicon-trash pull-right"></span>
                   </button>
-                  <button type="submit" class="btn btn-default pull-right">
+                  <button type="submit" onClick="submit()" class="btn btn-default pull-right">
                     <span class="glyphicon glyphicon-pencil pull-right"></span>
                   </button>
                 </li>
@@ -48,10 +48,10 @@ use Core\Language;
                       <input type="hidden" name="tipo_update" value="mail" />
                       <input type="hidden" name="id" value="<?=$user_mail['id_contato_email']?>" />
                       <li class="list-group-item"><strong>Email: </strong><input name="email" type="text" value="<?=$user_mail['email'];?>">
-                        <button type="submit" class="btn btn-default pull-right">
+                        <button type="submit" onClick="submit()" class="btn btn-default pull-right">
                           <span class="glyphicon glyphicon-trash pull-right"></span>
                         </button>
-                        <button type="submit" class="btn btn-default pull-right">
+                        <button type="submit" onClick="submit()" class="btn btn-default pull-right">
                             <span class="glyphicon glyphicon-pencil pull-right"></span>
                         </button>
                       </li>
@@ -92,10 +92,10 @@ use Core\Language;
                       <input type="hidden" name="tipo_update" value="phone" />
                       <input type="hidden" name="id" value="<?=$user_phone['id_contato_telefone']?>" />
                       <li class="list-group-item"><strong>Telefone: </strong><input name="telefone" type="text" value="<?=$user_phone['telefone'];?>">
-                        <button type="submit" class="btn btn-default pull-right">
+                        <button type="submit" onClick="submit()" class="btn btn-default pull-right">
                           <span class="glyphicon glyphicon-trash pull-right"></span>
                         </button>
-                        <button type="submit" class="btn btn-default pull-right">
+                        <button type="submit" onClick="submit()" class="btn btn-default pull-right">
                           <span class="glyphicon glyphicon-pencil pull-right"></span>
                         </button>
                       </li>
