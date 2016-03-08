@@ -8,6 +8,7 @@ namespace Controllers;
 use Core\View;
 use Core\Controller;
 use Helpers\Request;
+use Helpers\Hooks;
 
 /**
  * Sample controller showing a construct and 2 methods and their typical usage.
@@ -54,6 +55,7 @@ class PainelContatoUsuario extends Controller
         $data['phone'] = $this->contatos->getOnePhone($id_contato);
         $data['phone_type'] = $this->contatos->getPhoneType();
         $data['messages'] = $messages;
+        Hooks::addHook('js', '\Controllers\PainelContatoUsuario@scripts');
 
             // var_dump($data['mail_type']);
             // var_dump('aaa');
@@ -90,5 +92,9 @@ class PainelContatoUsuario extends Controller
         }
 
         $this->getUser($id_contato, $messages);
+    }
+
+    public function scripts() {
+      echo '<script src="/www/assets/js/edit_contact_user.js" type="text/javascript"></script>';
     }
 }
