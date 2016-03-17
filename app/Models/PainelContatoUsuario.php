@@ -185,14 +185,7 @@ class PainelContatoUsuario extends Model {
 
     }
 
-    public function deleteName($id_contato) {
-
-      $delete = $this->db->delete('contato', ['id_contato' => $id_contato]);
-    }
-
-
-
-     public function deletarPendente($id) {
+    public function deletar($id) {
         $result = [
             'success' => false,
             'messages' => []
@@ -201,10 +194,10 @@ class PainelContatoUsuario extends Model {
         $this->db->beginTransaction();
 
         try {
-            $delete_count = $this->db->delete('professor_login_pendente', ['login_pendente_id' => $id]);
+            $delete_count = $this->db->delete('blog_post', ['post_id' => $id]);
 
             if (!$delete_count) {
-                $result['messages'][] = ['type' => "danger", 'text' => "Erro ao deletar login da base de dados."];
+                $result['messages'][] = ['type' => "danger", 'text' => "Erro ao deletar post da base de dados."];
                 $this->db->rollBack();
                 return $result;
             } else {
@@ -212,7 +205,7 @@ class PainelContatoUsuario extends Model {
             }
 
         } catch (\Exception $Exception) {
-            $result['messages'][] = ['type' => "danger", 'text' => "Erro ao deletar login."];
+            $result['messages'][] = ['type' => "danger", 'text' => "Erro ao deletar post."];
             switch ($Exception->getCode()) {
                 default:
                     $result['messages'][] = ['type' => "danger", 'text' => $Exception->getCode()." - ".$Exception->getMessage()];
@@ -224,6 +217,14 @@ class PainelContatoUsuario extends Model {
 
         $this->db->commit();
         return $result;
+    }
+
+
+
+
+
+    public function insertPost($name, $email, $phone) {
+
     }
 
 }
