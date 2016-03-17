@@ -97,4 +97,11 @@ class PainelContatoUsuario extends Controller
     public function scripts() {
       echo '<script src="/www/assets/js/edit_contact_user.js" type="text/javascript"></script>';
     }
+
+    public function insert () {
+
+      View::renderTemplate('header', $data);
+      View::render('painel_contato_usuario/insert-blog', $data);
+      View::renderTemplate('footer', $data);
+    }
 }

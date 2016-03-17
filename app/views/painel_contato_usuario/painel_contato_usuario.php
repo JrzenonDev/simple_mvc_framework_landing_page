@@ -3,11 +3,11 @@ use Core\Language;
 ?>
 <div class="intro-header-pages">
 
-  <div class="container-fluid">
+  <div class="container">
     <div class="row">
-      <div class="col-md-12">
+      <div class="col-xs-12">
         <section class="page-header">
-          <a class="pull-right btn btn-default" href="/logout" role="button">Logout</a>
+          <a class="pull-right btn btn-default" href="/insert-blog" role="button">Novo Contato</a>
           <h1>Lista de usuários</h1>
 
           <table dw-loading="manifestacoes" class="table table-bordered">
