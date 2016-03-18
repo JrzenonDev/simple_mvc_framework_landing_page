@@ -100,8 +100,17 @@ class PainelContatoUsuario extends Controller
 
     public function insert () {
 
+      $data['mail_type'] = $this->contatos->getMailType();
+      $data['phone_type'] = $this->contatos->getPhoneType();
+
       View::renderTemplate('header', $data);
       View::render('painel_contato_usuario/insert-blog', $data);
       View::renderTemplate('footer', $data);
     }
+
+    public function insert_post() {
+
+        $email;
+    }
+
 }
