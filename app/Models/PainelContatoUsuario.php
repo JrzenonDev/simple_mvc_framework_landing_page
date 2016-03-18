@@ -219,11 +219,104 @@ class PainelContatoUsuario extends Model {
         return $result;
     }
 
+    public function insertPostName($name) {
+
+      $result = [
+            'success' => false,
+            'messages' => []
+        ];
+
+      $target_columns_name = ['nome', 'email', 'ddd', 'telefone'];
+      $insert_columns_name = [];
+
+      foreach ($target_columns_name as $column_name) {
+        if (isset($data[$column_name])) {
+          $insert_columns_name[$column_name] = $data[$column_name];
+        }
+      }
+
+      $this->db->beginTransaction();
+
+      try {
+        $row_count_name = $this->db->insert('contato', $insert_columns_name);
+
+        if (!$row_count_name) {
+          $result['messages'][] = ['type' => "danger", 'text' => "Erro ao inserir conteúdo."];
+          $this->db->rollBack();
+          return $result;
+        }
 
 
 
+      } catch (\Exception $e) {}
 
-    public function insertPost($name, $email, $phone) {
+    }
+
+    public function insertPostEmail($email) {
+
+      $result = [
+            'success' => false,
+            'messages' => []
+        ];
+
+      $target_columns_email = ['email', 'id_contato_email_tipo'];
+      $insert_columns_email = [];
+
+      foreach ($target_columns_email as $column_email) {
+        if (isset($data[$column_email])) {
+          $insert_columns_email[$column_email] = $data[$column_email];
+        }
+      }
+
+      $this->db->beginTransaction();
+
+      try {
+        $row_count_email = $this->db->insert('contato', $insert_columns_email);
+
+        if (!$row_count_email) {
+          $result['messages'][] = ['type' => "danger", 'text' => "Erro ao inserir conteúdo."];
+          $this->db->rollBack();
+          return $result;
+        }
+
+
+
+      } catch (\Exception $e) {}
+
+    }
+
+
+
+    public function insertPostPhone($phone) {
+
+      $result = [
+            'success' => false,
+            'messages' => []
+        ];
+
+      $target_columns_phone = ['ddd', 'telefone', 'id_contato_telefone_tipo'];
+      $insert_columns_phone = [];
+
+      foreach ($target_columns_phone as $column_phone) {
+        if (isset($data[$column_phone])) {
+          $insert_columns_phone[$column_phone] = $data[$column_phone];
+        }
+      }
+
+      $this->db->beginTransaction();
+
+      try {
+        $row_count_phone = $this->db->insert('contato', $insert_columns_phone);
+
+        if (!$row_count_phone) {
+          $result['messages'][] = ['type' => "danger", 'text' => "Erro ao inserir conteúdo."];
+          $this->db->rollBack();
+          return $result;
+        }
+
+
+
+      } catch (\Exception $e) {}
 
     }
 
