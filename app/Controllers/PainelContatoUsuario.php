@@ -110,9 +110,13 @@ class PainelContatoUsuario extends Controller
 
     public function insert_post() {
 
-        $nome = Request::post('nome');
+        $name = Request::post('nome');
         $email = Request::post('email');
         $phone = Request::post('phone');
+
+        $resull = $this->contatos->insertPostName($name);
+        $resull = $this->contatos->insertPostEmail($email);
+        $resull = $this->contatos->insertPostPhone($phone);
 
     }
 
