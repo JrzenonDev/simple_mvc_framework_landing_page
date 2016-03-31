@@ -12,7 +12,7 @@ use Core\Language;
                     <div class="intro-message">
                         <h1>José Roberto de Oliveira</h1>
                         <h3>Analista e Desenvolvedor de Sistema Web, Mobile e entusiasta da tecnologia.</h3>
-                        <img class="img-circle" src="app/templates/default/img/jose.jpg" alt="" width="200px" height="200px">
+                        <img class="img-user" src="app/templates/default/img/jose.jpg" alt="" width="200px" height="200px">
                         <hr class="intro-divider">
                         <ul class="list-inline intro-social-buttons">
                             <li>
