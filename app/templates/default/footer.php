@@ -15,25 +15,32 @@ $hooks = Hooks::get();
                 <div class="col-lg-12">
                     <ul class="list-inline">
                         <li>
-                            <a href="/#">Home</a>
+                            <a href="/#sobre">Sobre</a>
                         </li>
-                        <li class="footer-menu-divider">&sdot;</li>
                         <li>
-                            <a href="/#about">About</a>
+                            <a href="/#web">Web</a>
                         </li>
-                        <li class="footer-menu-divider">&sdot;</li>
                         <li>
-                            <a href="/#services">Services</a>
+                            <a href="/#mobile">Mobile</a>
+                        </li>
+                        <li>
+                            <a href="/#responsive">Responsive</a>
+                        </li>
+                        <li>
+                            <a href="/#portfolio">Portfólio</a>
+                        </li>
+                        <li>
+                            <a href="/#contato">Contato</a>
                         </li>
                         <li class="footer-menu-divider">&sdot;</li>
                         <li>
                             <p><strong>Email: </strong><a href="mailto:jrobertoonb@gmail.com">jrobertoonb@gmail.com</a></p>
                         </li>
                         <li>
-                            <p><strong>Phone: </strong>o11 - 97476-4843</p>
+                            <p><strong>Phone: </strong><a href="tel:974764843">o11 - 97476-4843</a></p>
                         </li>
                     </ul>
-                    <p class="copyright text-muted small">Copyright &copy; José Roberto de Oliveira 2016. All Rights Reserved</p>
+                    <p class="copyright text-muted small">José Roberto de Oliveira 2016.</p>
 
                 </div>
             </div>
