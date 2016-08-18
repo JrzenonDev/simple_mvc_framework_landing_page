@@ -33,7 +33,7 @@ class Home extends Controller
      */
     public function index()
     {
-        $data['title'] = $this->language->get('welcome_text');
+        $data['title'] = $this->language->get('José Roberto');
         $data['welcome_message'] = $this->language->get('welcome_message');
 
         View::renderTemplate('header', $data);
