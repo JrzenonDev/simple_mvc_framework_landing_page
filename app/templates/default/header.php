@@ -89,17 +89,26 @@ $hooks->run('afterBody');
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="/#about">About</a>
+                        <a href="/#sobre">Sobre</a>
                     </li>
                     <li>
-                        <a href="/#services">Services</a>
+                        <a href="/#web">Web</a>
                     </li>
                     <li>
-                        <a href="/#contact">Contact</a>
+                        <a href="/#mobile">Mobile</a>
                     </li>
                     <li>
+                        <a href="/#responsive">Responsive</a>
+                    </li>
+                    <li>
+                        <a href="/#portfolio">Portfólio</a>
+                    </li>
+                    <li>
+                        <a href="/#contato">Contato</a>
+                    </li>
+                    <!-- <li>
                         <a href="/painel_contato_usuario">Painel</a>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
