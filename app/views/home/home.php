@@ -11,18 +11,18 @@ use Core\Language;
                 <div class="col-lg-12">
                     <div class="intro-message">
                         <h1>José Roberto de Oliveira</h1>
-                        <h3>Analista e Desenvolvedor de Sistema Web, Mobile e entusiasta da tecnologia.</h3>
+                        <h3>Programador Web Front-end & Back-end , Mobile e entusiasta da tecnologia.</h3>
                         <img class="img-user" src="app/templates/default/img/jose.jpg" alt="" width="200px" height="200px">
                         <hr class="intro-divider">
                         <ul class="list-inline intro-social-buttons">
-                            <li>
+                            <!-- <li>
                                 <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
-                            </li>
+                            </li> -->
                             <li>
                                 <a target="_blank" href="https://github.com/JrzenonDev/" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
                             </li>
                             <li>
-                                <a href="#" class="btn btn-default btn-lg"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">Linkedin</span></a>
+                                <a href="https://br.linkedin.com/in/josé-roberto-oliveira-230833a8" class="btn btn-default btn-lg" target="_blank"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">Linkedin</span></a>
                             </li>
                         </ul>
                     </div>
@@ -41,39 +41,13 @@ use Core\Language;
     <div class="content-section-a">
 
         <div class="container">
-            <div class="row">
-                <div class="col-lg-5 col-sm-6">
-                    <hr class="section-heading-spacer">
-                    <div class="clearfix"></div>
-                    <h2 class="section-heading">Desenvolvimento Mobile<br>Apps Híbridos</h2>
-                    <p class="lead">
-                        Desenvolvimento de aplicativos móveis com HTML, CSS e JS. Alvo de múltiplas plataformas com base de um código, utilizando tecnologias como:
-                        <a target="_blank" href="https://cordova.apache.org/">Cordova - </a>
-                        <a taet="_blank" href="https://angularjs.org/">Angular - </a>
-                        <a target="_blank" href="ionicframework.com/">Ionic .</a>
-                    </p>
-                </div>
-                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
-                    <img class="img-responsive" src="app/templates/default/img/ipad.png" alt="">
-                </div>
-            </div>
-
-        </div>
-        <!-- /.container -->
-
-    </div>
-    <!-- /.content-section-a -->
-
-    <div class="content-section-b">
-
-        <div class="container">
 
             <div class="row">
                 <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
                     <hr class="section-heading-spacer">
                     <div class="clearfix"></div>
-                    <h2 class="section-heading">Desenvolvimento Web<br>Back-End</h2>
-                    <p class="lead">Desenvolvedor de aplicações rest (API), sistemas, sites, relatórios e scripts adicionais aos sistemas</p>
+                    <h2 class="section-heading">Desenvolvimento Web<br>Front-End & Back-End</h2>
+                    <p class="lead">Desenvolvedor de sites responsivos, sistemas de gerenciamento de conteúdo, relatórios e scripts adicionais aos sistemas</p>
                     <p class="lead">
                         <strong>Linguagens usadas:</strong><br>
                         Back-end:
@@ -90,6 +64,32 @@ use Core\Language;
                 </div>
                 <div class="col-lg-5 col-sm-pull-6  col-sm-6">
                     <img class="img-responsive" src="app/templates/default/img/desktop.png" alt="">
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.content-section-a -->
+
+    <div class="content-section-b">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">Desenvolvimento Mobile<br>Apps Híbridos</h2>
+                    <p class="lead">
+                        Desenvolvimento de aplicativos móveis com HTML, CSS e JS. Alvo de múltiplas plataformas com base de um código, utilizando tecnologias como:
+                        <a target="_blank" href="https://cordova.apache.org/">Cordova - </a>
+                        <a taet="_blank" href="https://angularjs.org/">Angular - </a>
+                        <a target="_blank" href="ionicframework.com/">Ionic .</a>
+                    </p>
+                </div>
+                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+                    <img class="img-responsive" src="app/templates/default/img/ipad.png" alt="">
                 </div>
             </div>
 
@@ -118,7 +118,7 @@ use Core\Language;
 
                 </div>
                 <div class="col-lg-5 col--offset-2 col-sm-6">
-                    <img class="img-responsive" src="app/templates/default/img/phones.png" alt="">
+                    <img class="img-responsive" src="app/templates/default/img/img-responsive.png" alt="">
                 </div>
             </div>
 
@@ -135,18 +135,18 @@ use Core\Language;
 
             <div class="row">
                 <div class="col-lg-6">
-                    <h2>&lt;h2&gt;Jose Roberto Oliveira&lt;/h2&gt;</h2>
+                    <h2>José Roberto de Oliveira</h2>
                 </div>
                 <div class="col-lg-6">
                     <ul class="list-inline banner-social-buttons">
-                        <li>
+                        <!-- <li>
                             <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
+                        </li> -->
+                        <li>
+                            <a href="https://github.com/JrzenonDev/" class="btn btn-default btn-lg" target="_blank"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
                         </li>
                         <li>
-                            <a href="https://github.com/JrzenonDev/" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
-                        </li>
-                        <li>
-                            <a href="#" class="btn btn-default btn-lg"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">Linkedin</span></a>
+                            <a href="https://br.linkedin.com/in/josé-roberto-oliveira-230833a8" class="btn btn-default btn-lg" target="_blank"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">Linkedin</span></a>
                         </li>
                     </ul>
                 </div>
