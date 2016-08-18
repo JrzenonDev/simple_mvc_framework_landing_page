@@ -3,7 +3,7 @@ use Core\Language;
 ?>
 
 <!-- Header -->
-    <a name="about"></a>
+    <a name="sobre"></a>
     <div class="intro-header">
         <div class="container">
 
@@ -37,7 +37,7 @@ use Core\Language;
 
     <!-- Page Content -->
 
-    <a  name="services"></a>
+    <a  name="web"></a>
     <div class="content-section-a">
 
         <div class="container">
@@ -63,7 +63,7 @@ use Core\Language;
                     </p>
                 </div>
                 <div class="col-lg-5 col-sm-pull-6  col-sm-6">
-                    <img class="img-responsive" src="app/templates/default/img/desktop.png" alt="">
+                    <img class="img-responsive" src="app/templates/default/img/desktop-2.png" alt="">
                 </div>
             </div>
 
@@ -72,7 +72,7 @@ use Core\Language;
 
     </div>
     <!-- /.content-section-a -->
-
+    <a  name="mobile"></a>
     <div class="content-section-b">
 
         <div class="container">
@@ -89,7 +89,7 @@ use Core\Language;
                     </p>
                 </div>
                 <div class="col-lg-5 col-lg-offset-2 col-sm-6">
-                    <img class="img-responsive" src="app/templates/default/img/ipad.png" alt="">
+                    <img class="img-responsive" src="app/templates/default/img/ipad-2.png" alt="">
                 </div>
             </div>
 
@@ -99,6 +99,7 @@ use Core\Language;
     </div>
     <!-- /.content-section-b -->
 
+    <a  name="responsive"></a>
     <div class="content-section-a">
 
         <div class="container">
@@ -128,7 +129,7 @@ use Core\Language;
     </div>
     <!-- /.content-section-a -->
 
-    <a  name="contact"></a>
+    <a  name="contato"></a>
     <div class="banner">
 
         <div class="container">
