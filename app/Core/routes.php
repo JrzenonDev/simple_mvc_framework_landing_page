@@ -10,6 +10,7 @@ use Helpers\Hooks;
 /** Define routes. */
 Router::any('', 'Controllers\Home@index');
 Router::any('contact', 'Controllers\Contact@index');
+Router::any('portfolio', 'Controllers\Portfolio@index');
 Router::any('painel_contato_usuario', 'Controllers\PainelContatoUsuario@ListUser');
 Router::get('edit_contato_usuario/(:num)', 'Controllers\PainelContatoUsuario@GetUser');
 Router::post('edit_contato_usuario/(:num)', 'Controllers\PainelContatoUsuario@PostUser');

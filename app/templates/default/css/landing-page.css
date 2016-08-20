@@ -177,3 +177,39 @@ footer {
 p.copyright {
     margin: 15px 0 0;
 }
+
+.balao-img {
+    position: absolute;
+    width: auto;
+    height: 400px;
+    /* Chrome, Safari, Opera */
+    -webkit-animation-name: balao;
+    -webkit-animation-duration: 5s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-delay: 2s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    -webkit-animation-timing-function: ease-in;
+    /* Standard syntax */
+    animation-name: balao;
+    animation-duration: 25s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes balao {
+
+    0%   {left:300px; top:0px;}
+    100% {left:0px; top:0px;}
+}
+
+/* Standard syntax */
+@keyframes balao {
+
+    0%   {left:300px; top:0px;}
+    100% {left:0px; top:0px;}
+}

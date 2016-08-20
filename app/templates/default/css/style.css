@@ -7,7 +7,7 @@
     background: #303030;
 }
 
-..default-jr {
+.default-jr {
     background: #303030;
 
 }
@@ -26,4 +26,132 @@
         border: 3px solid #fff;
         border-radius: 50%;
         background-color: #fff;
+}
+
+/* Pages */
+
+/* Pportfolio */
+
+#intro-portfolio{
+    margin-bottom: -180px;
+}
+
+.sky-box {
+    background-color: #56a9b7;
+    height: 535px;
+    padding-top: 60px;
+}
+
+.sky {
+}
+
+
+.cloudOne {
+    position: relative;
+    /* Chrome, Safari, Opera */
+    -webkit-animation-name: sky-1;
+    -webkit-animation-duration: 5s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-delay: 0s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    -webkit-animation-timing-function: ease-in;
+    /* Standard syntax */
+    animation-name: sky-1;
+    animation-duration: 25s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in;
+}
+
+.cloudTwo {
+    position: absolute;
+    margin-top: 90px;
+    z-index: 5;
+    /* Chrome, Safari, Opera */
+    -webkit-animation-name: sky-2;
+    -webkit-animation-duration: 5s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-delay: 0s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    -webkit-animation-timing-function: ease-in;
+    /* Standard syntax */
+    animation-name: sky-2;
+    animation-duration: 25s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in;
+
+}
+
+
+.cloudThree {
+    position: absolute;
+    margin-top: 230px;
+    /* Chrome, Safari, Opera */
+    -webkit-animation-name: sky-3;
+    -webkit-animation-duration: 5s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-delay: 0s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    -webkit-animation-timing-function: ease-in;
+    /* Standard syntax */
+    animation-name: sky-3;
+    animation-duration: 25s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes sky-1 {
+    /*0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:200px; top:0px;}
+    50%  {background-color:blue; left:200px; top:200px;}
+    75%  {background-color:green; left:0px; top:200px;}
+    100% {background-color:red; left:0px; top:0px;}*/
+
+    0%   {left:0px; top:0px;}
+    100% {left:600px; top:0px;}
+}
+
+/* Standard syntax */
+@keyframes sky-1 {
+
+    0%   {left:0px; top:0px;}
+    100% {left:600px; top:0px;}
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes sky-2 {
+
+    0%   {left:600px; top:0px;}
+    100% {left:0px; top:0px;}
+}
+
+@keyframes sky-2 {
+
+    0%   {left:600px; top:0px;}
+    100% {left:0px; top:0px;}
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes sky-3 {
+
+    0%   {left:200px; top:0px;}
+    100% {left:0px; top:0px;}
+}
+
+@keyframes sky-3 {
+
+    0%   {left:200px; top:0px;}
+    100% {left:0px; top:0px;}
 }
