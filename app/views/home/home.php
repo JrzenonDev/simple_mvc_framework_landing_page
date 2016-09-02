@@ -12,9 +12,10 @@ use Core\Language;
                     <div class="intro-message">
                         <h1>José Roberto de Oliveira</h1>
                         <h3>Programador Web Front-end & Back-end , Mobile e entusiasta da tecnologia.</h3>
-                        <img class="img-user" src="app/templates/default/img/jose.jpg" alt="" width="200px" height="200px">
-                        <hr class="intro-divider">
-                        <ul class="list-inline intro-social-buttons">
+                        <p class="visible-xs"><br /><br /></p>
+                        <img class="img-user hidden-xs" src="app/templates/default/img/img-user.png" alt="" width="200px" height="200px">
+                        <hr class="intro-divider hidden-xs">
+                        <ul class="list-inline intro-social-buttons hidden-xs">
                             <!-- <li>
                                 <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
                             </li> -->
@@ -225,6 +226,43 @@ use Core\Language;
 
     </div>
     <!-- /.content-section-b -->
+
+    <div class="content-section-a">
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">Aldir Blanc (2016)</h2>
+                    <p class="lead">Front End & Back End.<br />Elaboração de Layout e programação</p>
+                    <p class="lead"><strong>Link do site:</strong> <a href="http://aldirblanc.com.br" target="_blank">http://aldirblanc.com.br</a></p>
+                    <p class="lead">
+                        <strong>Linguagens utilizadas:</strong><br>
+                        Back-end:
+                        <a target="_blank" href="https://php.net/manual/pt_BR/index.php">PHP, </a>
+                        <a target="_blank" href="https://www.mysql.com/">MySQL</a><br>
+                        Front-end:
+                        <a target="_self" href="#">Javascript, JQuery</a>
+                        <a target="_self" href="#">HTML5 AND CSS3, </a>
+                        <a target="_blank" href="https://getbootstrap.com/">Bootstrap <i>(framework front-end)</i></a>
+                    </p>
+                    <p class="lead">
+                        <strong>Técnicas utilizadas:</strong><br>HTML 5 – CSS3 Semântica, Bootstrap.<br />PHP e MySQL, funções para envio de dados para email, nos formulários de contato e cadastro em banco de dados.
+                    </p>
+                </div>
+                <div class="col-lg-5 col-sm-pull-6  col-sm-6">
+                    <a href="http://aldirblanc.com.br" target="_blank">
+                        <img class="img-responsive" src="app/templates/default/img/pages/portfolio/job-03.png" alt="">
+                    </a>
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
 
     <div class="sky-box hidden-xs">
 
