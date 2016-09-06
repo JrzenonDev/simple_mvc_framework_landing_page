@@ -13,7 +13,7 @@ use Core\Language;
                         <h1>José Roberto de Oliveira</h1>
                         <h3>Programador Web Front-end & Back-end , Mobile e entusiasta da tecnologia.</h3>
                         <p class="visible-xs"><br /><br /></p>
-                        <img class="img-user hidden-xs" src="app/templates/default/img/img-user.png" alt="" width="200px" height="200px">
+                        <img class="img-user hidden-xs" src="app/templates/default/img/logo-jr.png" alt="" width="200px" height="200px">
                         <hr class="intro-divider hidden-xs">
                         <ul class="list-inline intro-social-buttons hidden-xs">
                             <!-- <li>
